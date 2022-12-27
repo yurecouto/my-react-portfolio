@@ -1,0 +1,34 @@
+.bar_title {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1280px) {
+  .bar_title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .bar_title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bar_title {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .bar_title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bar_title {
+    font-size: 14px;
+  }
+}

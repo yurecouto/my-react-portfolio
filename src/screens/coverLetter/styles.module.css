@@ -1,0 +1,154 @@
+.cover_letter_container {
+  margin-top: 6vh;
+  width: 100%;
+  height: 94vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover_letter_row {
+  margin-top: 16vh;
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image_container {
+  width: 280px;
+  min-width: 200px;
+  height: 40vh;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image_avatar {
+  width: 280px;
+  height: 280px;
+}
+
+.image_avatar_title {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 10vh;
+}
+
+.about_container {
+  width: 70%;
+  min-width: 360px;
+  display: flex;
+}
+
+@media screen and (max-width: 1600px) {
+  .image_avatar {
+    width: 220px;
+    height: 220px;
+  }
+
+  .image_container {
+    width: 220px;
+    height: 40vh;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .about_container {
+    width: 64%;
+  }
+
+  .image_container {
+    width: 200px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    height: 36vh;
+  }
+
+  .image_avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .cover_letter_row {
+    justify-content: space-around;
+    margin-top: 32px;
+  }
+
+  .about_container {
+    width: 100%;
+  }
+
+  .image_container {
+    min-width: 200px;
+    height: 30vh;
+  }
+
+  .image_avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cover_letter_row {
+    margin-top: 24px;
+  }
+
+  .about_container {
+    width: 100%;
+  }
+
+  .image_container {
+    width: 200px;
+  }
+
+  .image_avatar {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cover_letter_row {
+    margin-top: 16px;
+  }
+
+  .image_container {
+    width: 180px;
+    height: 32vh;
+    align-items: center;
+  }
+
+  .image_avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .cover_letter_row {
+    margin-top: 8px;
+  }
+
+  .image_container {
+    min-width: 140px;
+    width: 140px;
+    height: 24vh;
+  }
+
+  .image_avatar {
+    width: 140px;
+    height: 140px;
+  }
+}

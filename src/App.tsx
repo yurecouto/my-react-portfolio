@@ -1,25 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from 'react';
+import { MainContainer } from './components/containers/MainContainer';
+import { MainHeader } from './components/functionals/MainHeader';
+import Competencies from './screens/competencies';
+import CoverLetter from './screens/coverLetter';
 
 function App() {
+  useEffect(() => {
+    document.body.style.padding = "0";
+    document.body.style.margin = "0";
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MainHeader/>
+      <MainContainer>
+        <CoverLetter/>
+        <Competencies/>
+      </MainContainer>
+    </>
   );
 }
 
