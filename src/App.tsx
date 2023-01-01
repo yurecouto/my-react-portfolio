@@ -3,6 +3,7 @@ import { MainContainer } from './components/containers/MainContainer';
 import { MainHeader } from './components/functionals/MainHeader';
 import Competencies from './screens/competencies';
 import CoverLetter from './screens/coverLetter';
+import Curriculum from './screens/curriculum';
 
 function App() {
   useEffect(() => {
@@ -16,6 +17,7 @@ function App() {
       <MainContainer>
         <CoverLetter/>
         <Competencies/>
+        <Curriculum/>
       </MainContainer>
     </>
   );

@@ -1,0 +1,88 @@
+.curriculum_container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid salmon;
+}
+
+.curriculum_container_timeline {
+  width: 620px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid blue;
+}
+
+.curriculum_timeline {
+  width: 600px;
+  margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-left: 4px solid blue;
+}
+
+.curriculum_timeline_card {
+  width: 600px;
+  height: 200px;
+  margin-left: -32px;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid blue;
+}
+
+.curriculum_timeline_card_content {
+  width: 500px;
+  height: 200px;
+  left: -64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+
+.curriculum_timeline_card_date {
+  width: 128px;
+  height: 32px;
+  border-radius: 16px;
+  margin-top: 64px;
+  left: -80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+
+
+.curriculum_container_skills {
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+
+@media screen and (max-width: 1600px) {
+}
+
+@media screen and (max-width: 1280px) {
+}
+
+@media screen and (max-width: 960px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 640px) {
+}
+
+@media screen and (max-width: 480px) {
+}
