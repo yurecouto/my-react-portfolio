@@ -1,12 +1,14 @@
 import React from "react";
-import { PageContainer } from "../../components/containers/PageContainer";
+import { Icon } from '@iconify/react';
 
 import styles from "./styles.module.css";
 
 // import keyboard from "../../static/keyboard.jpg"
 import avatar from "../../static/avatar.png"
+
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitleDefault } from "../../components/texts/TitleDefault";
+import { PageContainer } from "../../components/containers/PageContainer";
 
 const CoverLetter = () => {
   return (
@@ -21,6 +23,56 @@ const CoverLetter = () => {
               alt=''
             />
             <div className={styles.image_avatar_title}>
+              <div className={styles.image_avatar_icon_container}>
+                <div className={styles.image_avatar_icon}>
+                  <a href="https://docs.iconify.design/icon-components/react/">
+                    <Icon
+                      className={styles.image_avatar_icon_style}
+                      icon="logos:linkedin-icon"
+                      style={{ borderRadius: "16%"}}
+                    />
+                  </a>
+                </div>
+                <div className={styles.image_avatar_icon}>
+                  <a href="https://docs.iconify.design/icon-components/react/">
+                    <Icon
+                      className={styles.image_avatar_icon_style}
+                      icon="codicon:github"
+                      style={{ borderRadius: "100%", color: "white", backgroundColor: "transparent"}}
+                    />
+                  </a>
+                </div>
+                <div className={styles.image_avatar_icon}>
+                  <a href="https://docs.iconify.design/icon-components/react/">
+                    <Icon
+                      className={styles.image_avatar_icon_style}
+                      icon="simple-icons:freelancer"
+                      style={{ backgroundColor: "transparent", color: "#0093D0"}}
+
+                    />
+                  </a>
+                </div>
+                <div className={styles.image_avatar_icon}>
+                  <a href="https://docs.iconify.design/icon-components/react/">
+                    <Icon
+                      className={styles.image_avatar_icon_style}
+                      icon="tabler:brand-upwork"
+                      style={{ backgroundColor: "transparent", color: "#6FDA44"}}
+
+                    />
+                  </a>
+                </div>
+                <div className={styles.image_avatar_icon}>
+                  <a href="https://docs.iconify.design/icon-components/react/">
+                    <Icon
+                      className={styles.image_avatar_icon_style}
+                      icon="logos:twitter"
+                      style={{ backgroundColor: "transparent"}}
+
+                    />
+                  </a>
+                </div>
+              </div>
               <TitleDefault
                 text="Full Stack"
               />

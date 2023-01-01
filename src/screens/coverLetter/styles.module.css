@@ -20,7 +20,7 @@
 .image_container {
   width: 280px;
   min-width: 200px;
-  height: 40vh;
+  height: 420px;
   display: flex;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 10vh;
+  height: 16vh;
 }
 
 .about_container {
@@ -46,6 +46,29 @@
   min-width: 360px;
   display: flex;
 }
+
+.image_avatar_icon_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.image_avatar_icon {
+  height: 24px;
+}
+
+.image_avatar_icon_style {
+  height: 24px;
+  width: 24px;
+  margin-left: 8px;
+  margin-right: 8px;
+  background-color: white;
+}
+
 
 @media screen and (max-width: 1600px) {
   .image_avatar {
@@ -55,7 +78,7 @@
 
   .image_container {
     width: 220px;
-    height: 40vh;
+    height: 366px;
     display: flex;
   }
 }
@@ -69,7 +92,7 @@
     width: 200px;
     margin-bottom: 16px;
     margin-right: 16px;
-    height: 36vh;
+    height: 328px;
   }
 
   .image_avatar {
@@ -90,7 +113,7 @@
 
   .image_container {
     min-width: 200px;
-    height: 30vh;
+    height: 320px;
   }
 
   .image_avatar {
@@ -110,6 +133,7 @@
 
   .image_container {
     width: 200px;
+    margin-bottom: 24px;
   }
 
   .image_avatar {
@@ -124,14 +148,14 @@
   }
 
   .image_container {
-    width: 180px;
-    height: 32vh;
+    width: 170px;
+    height: 280px;
     align-items: center;
   }
 
   .image_avatar {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
   }
 
 }
@@ -144,7 +168,8 @@
   .image_container {
     min-width: 140px;
     width: 140px;
-    height: 24vh;
+    height: 244px;
+    margin-bottom: 16px;
   }
 
   .image_avatar {

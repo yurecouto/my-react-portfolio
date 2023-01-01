@@ -43,6 +43,6 @@
     ]
   },
   "devDependencies": {
-    "@iconify/react": "^4.0.0"
+    "@iconify/react": "^4.0.1"
   }
 }
