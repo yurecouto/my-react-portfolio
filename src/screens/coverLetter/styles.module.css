@@ -1,0 +1,53 @@
+.cover_letter_container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover_letter_sub_container {
+  height: 160px;
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hello_world {
+  margin: 0;
+  padding: 0;
+  font-weight: 800;
+  font-size: 40px;
+  color: whitesmoke;
+  font-family: Consolas, Monaco, monospace;
+}
+
+
+.typing_text {
+  font: bold 200% Consolas, Monaco, monospace;
+  font-size: 48px;
+  font-weight: 100;
+  text-decoration: underline;
+  border-right: 0.1em solid;
+  width: 31ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2.5s steps(31, end),
+  cursor-blink 0.3s step-end infinite alternate;
+  color: whitesmoke;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+}
+
+@keyframes cursor-blink {
+  50% {
+      border-color: transparent;
+  }
+}

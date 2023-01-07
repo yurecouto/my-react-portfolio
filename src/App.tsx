@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { MainContainer } from './components/containers/MainContainer';
 import { Header } from './components/header';
 
 import CoverLetter from './screens/coverLetter';
+import WhatIDo from './screens/whatIDo';
 
 function App() {
   useEffect(() => {
@@ -29,7 +31,10 @@ function App() {
   return (
     <>
       <Header/>
-      <CoverLetter/>
+      <MainContainer>
+        <CoverLetter/>
+        <WhatIDo/>
+      </MainContainer>
     </>
   );
 }

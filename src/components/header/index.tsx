@@ -24,6 +24,7 @@ function Header({
       <div className={styles.header_menu}>
         <ul className={styles.header_menu_ul}>
           <TextList text="Home"/>
+          <TextList text="About me"/>
           <TextList text="What I Do"/>
           <TextList text="Curriculum"/>
           <TextList text="Portfolio"/>
