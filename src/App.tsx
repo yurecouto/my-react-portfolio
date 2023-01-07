@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
-import { MainContainer } from './components/containers/MainContainer';
-import { MainHeader } from './components/functionals/MainHeader';
-import Competencies from './screens/competencies';
+import { Header } from './components/header';
+
 import CoverLetter from './screens/coverLetter';
-import Curriculum from './screens/curriculum';
 
 function App() {
   useEffect(() => {
@@ -30,12 +28,8 @@ function App() {
 
   return (
     <>
-      <MainHeader/>
-      <MainContainer>
-        <CoverLetter/>
-        <Competencies/>
-        <Curriculum/>
-      </MainContainer>
+      <Header/>
+      <CoverLetter/>
     </>
   );
 }
