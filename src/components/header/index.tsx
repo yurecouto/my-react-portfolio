@@ -14,6 +14,14 @@ function Header({
   children,
   }: Props) {
 
+  const handleClickScroll = () => {
+    const element = document.getElementById('section-1');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.header_profile_pic_container} >
@@ -23,7 +31,7 @@ function Header({
 
       <div className={styles.header_menu}>
         <ul className={styles.header_menu_ul}>
-          <TextList text="Home"/>
+          <TextList text="Home" handleSomething={handleClickScroll}/>
           <TextList text="About me"/>
           <TextList text="What I Do"/>
           <TextList text="Curriculum"/>

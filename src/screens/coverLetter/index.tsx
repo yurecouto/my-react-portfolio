@@ -11,6 +11,7 @@ function CoverLetter () {
   return (
     <>
       <div
+        id="section-1"
         className={styles.cover_letter_container}
         style={{
           width: `${width - 260}px`,
