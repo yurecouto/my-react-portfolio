@@ -1,9 +1,13 @@
-import React, { useEffect } from 'react';
-import { MainContainer } from './components/containers/MainContainer';
-import { Header } from './components/header';
+import React, { useEffect } from "react";
+import { MainContainer } from "./components/containers/MainContainer";
+import { Header } from "./components/header";
+import AboutMe from "./screens/aboutMe";
+import Contact from "./screens/contact";
+import Curriculum from "./screens/curriculum";
 
-import CoverLetter from './screens/coverLetter';
-import WhatIDo from './screens/whatIDo';
+import Home from "./screens/home";
+import Portfolio from "./screens/portfolio";
+import WhatIDo from "./screens/whatIDo";
 
 function App() {
   useEffect(() => {
@@ -15,8 +19,12 @@ function App() {
     <>
       <Header/>
       <MainContainer>
-        <CoverLetter/>
+        <Home/>
+        <AboutMe/>
         <WhatIDo/>
+        <Curriculum/>
+        <Portfolio/>
+        <Contact/>
       </MainContainer>
     </>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./styles.module.css";
 
-interface InputProps {
+interface Props {
   text?: string;
   textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
 }
@@ -10,7 +10,7 @@ interface InputProps {
 function TitleDefault({
   text,
   textAlign = "center"
-  }: InputProps) {
+  }: Props) {
 
   return (
     <h2

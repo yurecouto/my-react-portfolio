@@ -3,14 +3,14 @@ import { useWindowSize } from "../../hooks/window";
 
 import styles from "./styles.module.css";
 
-function WhatIDo () {
+function Portfolio () {
   const {height, width} = useWindowSize();
 
   return (
     <>
       <div
-        id="section-what-i-do"
-        className={styles.what_i_do_container}
+        id="section-portfolio"
+        className={styles.portfolio_container}
         style={{
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           height: `${height}px`,
@@ -21,4 +21,4 @@ function WhatIDo () {
   );
 };
 
-export default WhatIDo;
+export default Portfolio;

@@ -7,21 +7,21 @@ interface Props {
   textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
 }
 
-function TextDefault({
+function TextAutoWrite({
   text,
   textAlign = "center"
   }: Props) {
 
   return (
-    <h2
-      className={styles.text_default}
+    <div
+      className={styles.typing_text}
       style={{
-        textAlign: textAlign
+        width: `${text?.length}ch`,
       }}
     >
       {text}
-    </h2>
+    </div>
   )
 };
 
-export { TextDefault };
+export { TextAutoWrite };

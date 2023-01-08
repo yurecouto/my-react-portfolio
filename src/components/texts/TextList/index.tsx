@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import styles from "./styles.module.css";
 
-interface InputProps {
+interface Props {
   text?: string;
   textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
   handleSomething?: (param: any) => void;
@@ -12,7 +12,7 @@ function TextList({
   text,
   textAlign = "center",
   handleSomething
-  }: InputProps) {
+  }: Props) {
   const [hover, setHover] = useState<boolean>();
 
   const handleMouseIn = () => {

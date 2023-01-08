@@ -1,20 +1,22 @@
 import React from "react";
+import { TextAutoWrite } from "../../components/texts/TextAutoWrite";
+import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
 
 import keyboard from "../../static/keyboard.jpg"
 
 import styles from "./styles.module.css";
 
-function CoverLetter () {
+function Home () {
   const {height, width} = useWindowSize();
 
   return (
     <>
       <div
-        id="section-1"
+        id="section-home"
         className={styles.cover_letter_container}
         style={{
-          width: `${width - 260}px`,
+          width: width > 960 ? `${width - 260}px` : `${width}px` ,
           height: `${height}px`,
           backgroundImage: `url(${keyboard})`,
           backgroundAttachment: "fixed",
@@ -24,20 +26,13 @@ function CoverLetter () {
         }}
       >
         <div className={styles.cover_letter_sub_container}>
-          <div>
-            <p className={styles.hello_world}>Hello World!</p>
-          </div>
+          <TitlePage text="Hello World!"/>
 
-          <div
-            className={styles.typing_text}
-          >
-            I'm a Full Stack Web Developer.
-          </div>
-
+          <TextAutoWrite text="I'm a Full Stack Web Developer."/>
         </div>
       </div>
     </>
   );
 };
 
-export default CoverLetter;
+export default Home;

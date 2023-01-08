@@ -1,0 +1,22 @@
+.cover_letter_container {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover_letter_sub_container {
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 960px) {
+  .cover_letter_sub_container {
+    height: 120px;
+  }
+}

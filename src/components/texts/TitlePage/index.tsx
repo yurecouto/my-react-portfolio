@@ -7,14 +7,14 @@ interface Props {
   textAlign?: "start" | "end" | "left" | "right" | "center" | "justify" | "match-parent";
 }
 
-function TextDefault({
+function TitlePage({
   text,
   textAlign = "center"
   }: Props) {
 
   return (
     <h2
-      className={styles.text_default}
+      className={styles.title_page}
       style={{
         textAlign: textAlign
       }}
@@ -24,4 +24,4 @@ function TextDefault({
   )
 };
 
-export { TextDefault };
+export { TitlePage };
