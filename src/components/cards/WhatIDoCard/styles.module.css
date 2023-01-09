@@ -1,0 +1,114 @@
+.what_i_do_card {
+  border: 1px solid violet;
+  width: 664px;
+  margin-bottom: 96px;
+  margin-left: 36px;
+  margin-right: 36px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.what_i_do_card_icon_container {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.what_i_do_card_icon {
+  color: whitesmoke;
+  height: 88px;
+  width: 88px;
+}
+
+.what_i_do_card_container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+@media screen and (max-width: 1760px) {
+  .what_i_do_card {
+    width: 600px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+}
+
+@media screen and (max-width: 1680px) {
+  .what_i_do_card {
+    width: 524px;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .what_i_do_card {
+    border: 1px solid red;
+    width: 488px;
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .what_i_do_card {
+    width: 452px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .what_i_do_card {
+    border: 1px solid blue;
+    width: 400px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .what_i_do_card {
+    border: 1px solid yellow;
+    width: 416px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .what_i_do_card {
+    width: 520px;
+  }
+}
+
+@media screen and (max-width: 864px) {}
+@media screen and (max-width: 768px) {
+  .what_i_do_card {
+    width: 464px;
+  }
+}
+
+@media screen and (max-width: 704px) {}
+@media screen and (max-width: 640px) {
+  .what_i_do_card {
+    width: 436px;
+  }
+}
+
+@media screen and (max-width: 560px) {}
+@media screen and (max-width: 480px) {
+  .what_i_do_card {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 400px) {}

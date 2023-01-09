@@ -1,4 +1,5 @@
 import React from "react";
+import { IconDefault } from "../../components/texts/IconDefault";
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitleDefault } from "../../components/texts/TitleDefault";
 import { TitlePage } from "../../components/texts/TitlePage";
@@ -30,36 +31,42 @@ function AboutMe () {
           </div>
 
           <div className={styles.about_me_sub_container_info}>
-            <div className={styles.about_me_info_row}>
-              <div className={styles.about_me_info_row_key}>
-                <TextDefault text="Name:"/>
+            <div className={styles.about_me_info_row_container}>
+              <div className={styles.about_me_info_row}>
+                <div className={styles.about_me_info_row_key}>
+                  <TextDefault text="Name:"/>
+                </div>
+                <div className={styles.about_me_info_row_key}>
+                  <TextDefault text="Yure Barbosa Couto"/>
+                </div>
               </div>
-              <div className={styles.about_me_info_row_key}>
-                <TextDefault text="Yure Barbosa Couto"/>
-              </div>
-            </div>
-            <div className={styles.about_me_info_row_line}/>
+              <div className={styles.about_me_info_row_line}/>
 
-            <div className={styles.about_me_info_row}>
-              <div className={styles.about_me_info_row_key}>
-                <TextDefault text="E-mail:"/>
+              <div className={styles.about_me_info_row}>
+                <div className={styles.about_me_info_row_key}>
+                  <TextDefault text="E-mail:"/>
+                </div>
+                <div className={styles.about_me_info_row_key}>
+                  <TextDefault text="yure.couto@outlook.com"/>
+                </div>
               </div>
-              <div className={styles.about_me_info_row_key}>
-                <TextDefault text="yure.couto@outlook.com"/>
-              </div>
-            </div>
-            <div className={styles.about_me_info_row_line}/>
+              <div className={styles.about_me_info_row_line}/>
 
-            <div className={styles.about_me_info_row}>
-              <div className={styles.about_me_info_row_key}>
-                <TextDefault text="Based in:"/>
+              <div className={styles.about_me_info_row}>
+                <div className={styles.about_me_info_row_key}>
+                  <TextDefault text="Based in:"/>
+                </div>
+                <div className={styles.about_me_info_row_key}>
+                  <TextDefault text="Luziânia, Goiás, Brasil"/>
+                </div>
               </div>
-              <div className={styles.about_me_info_row_key}>
-                <TextDefault text="Luziânia, Goiás, Brasil"/>
-              </div>
+              <div className={styles.about_me_info_row_line}/>
             </div>
-            <div className={styles.about_me_info_row_line}/>
 
+            <div className={styles.about_me_info_download}>
+              <TextDefault text="Download my CV"/>
+              <IconDefault icon="ic:round-download" />
+            </div>
           </div>
         </div>
       </div>
