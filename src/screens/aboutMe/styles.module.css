@@ -142,13 +142,13 @@
   }
 
   .about_me_sub_container_text {
-    width: 80%;
+    width: 90%;
     height: 420px;
   }
 
   .about_me_sub_container_info {
     margin-top: 32px;
-    width: 80%;
+    width: 90%;
     min-height: 200px;
     height: auto;
   }

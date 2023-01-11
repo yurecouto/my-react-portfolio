@@ -1,3 +1,143 @@
+.curriculum_title {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
 .curriculum_container {
   border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.curriculum_sub_container{
+  border: 1px solid purple;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.curriculum_timeline_container {
+  border: 1px solid blueviolet;
+  width: 56%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.curriculum_professional {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid springgreen;
+}
+
+.curriculum_professional_cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.curriculum_professional_title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.curriculum_education {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.curriculum_education_title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.curriculum_education_cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.curriculum_skills {
+  border: 1px solid blueviolet;
+  width: 36%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.curriculum_skills_title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.curriculum_skills_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.curriculum_skills_container_title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.curriculum_skills_sub_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1760px) {}
+@media screen and (max-width: 1680px) {}
+@media screen and (max-width: 1600px) {}
+
+@media screen and (max-width: 1440px) {
+  .curriculum_sub_container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .curriculum_timeline_container {
+    width: 90%;
+  }
+
+  .curriculum_skills {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1280px) {}
+@media screen and (max-width: 1120px) {}
+@media screen and (max-width: 960px) {}
+@media screen and (max-width: 864px) {}
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 704px) {}
+@media screen and (max-width: 640px) {}
+@media screen and (max-width: 560px) {}
+@media screen and (max-width: 480px) {}
+@media screen and (max-width: 400px) {}

@@ -1,0 +1,10 @@
+.skill_card {
+  padding: 8px;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
