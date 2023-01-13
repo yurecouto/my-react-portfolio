@@ -1,16 +1,15 @@
 .what_i_do_container {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 1px solid #676767;
 }
 
 .what_i_do_sub_container {
-  border: 1px solid steelblue;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }

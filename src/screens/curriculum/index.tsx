@@ -46,6 +46,8 @@ function Curriculum () {
             </div>
           </div>
 
+          <div className={styles.curriculum_sub_container_line}/>
+
           <div className={styles.curriculum_skills}>
             <div className={styles.curriculum_skills_title}>
               <SubTitleDefault text="Skills"/>

@@ -24,7 +24,9 @@ function WhatIDoCard({
       </div>
 
       <div className={styles.what_i_do_card_container}>
-        <TitleSecondary textAlign="left" text="Web Development" />
+        <div className={styles.what_i_do_card_container_title}>
+          <TitleSecondary textAlign="left" text="Web Development" />
+        </div>
         <TextSecondary textAlign="left" text="Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."/>
       </div>
     </div>

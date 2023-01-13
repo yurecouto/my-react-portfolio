@@ -4,15 +4,14 @@
 }
 
 .curriculum_container {
-  border: 1px solid green;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 1px solid #676767;
 }
 
 .curriculum_sub_container{
-  border: 1px solid purple;
   height: auto;
   width: 100%;
   display: flex;
@@ -22,13 +21,13 @@
 }
 
 .curriculum_timeline_container {
-  border: 1px solid blueviolet;
-  width: 56%;
+  width: 50%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  margin-bottom: 32px;
 }
 
 .curriculum_professional {
@@ -38,7 +37,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  border: 1px solid springgreen;
 }
 
 .curriculum_professional_cards {
@@ -75,13 +73,15 @@
 }
 
 .curriculum_skills {
-  border: 1px solid blueviolet;
   width: 36%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  border-left: 1px solid #676767;
+  padding-left: 32px;
+  padding-bottom: 32px;
 }
 
 .curriculum_skills_title {
@@ -115,7 +115,8 @@
 @media screen and (max-width: 1680px) {}
 @media screen and (max-width: 1600px) {}
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {}
+@media screen and (max-width: 1280px) {
   .curriculum_sub_container {
     flex-direction: column;
     justify-content: space-between;
@@ -128,10 +129,18 @@
 
   .curriculum_skills {
     width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-left: 0px;
+    padding-left: 0px;
+    border-top: 1px solid #676767;
+    padding-top: 16px;
+    margin-bottom: 32px;
   }
 }
-
-@media screen and (max-width: 1280px) {}
 @media screen and (max-width: 1120px) {}
 @media screen and (max-width: 960px) {}
 @media screen and (max-width: 864px) {}
