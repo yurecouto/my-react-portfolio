@@ -1,0 +1,46 @@
+.portfolio_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 16px;
+  height: auto;
+  width: 400px;
+  border-end-end-radius: 16px;
+  border-end-start-radius: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background-color: #343434;
+  transition: 0.3s;
+}
+
+.portfolio_card_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.portfolio_card_name {
+  margin-left: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: auto;
+
+}
+
+.portfolio_card_description {
+  margin-left: 8px;
+  margin-bottom: 8px;
+  width: auto;
+}
+
+.portfolio_card_image {
+  max-width: 400px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.portfolio_card:hover {
+  transform: scale(1.04);
+}
+

@@ -1,3 +1,56 @@
 .portfolio_container {
   border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.portfolio_container_title {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+.portfolio_sub_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.portfolio_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.portfolio_menu_items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  margin-bottom: 32px;
+}
+
+.portfolio_card_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 960px) {}
+@media screen and (max-width: 864px) {}
+@media screen and (max-width: 768px) {
+  .portfolio_menu_items {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 704px) {}
+@media screen and (max-width: 640px) {}
+@media screen and (max-width: 560px) {}
+@media screen and (max-width: 480px) {}
+@media screen and (max-width: 400px) {}
