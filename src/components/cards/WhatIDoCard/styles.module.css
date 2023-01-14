@@ -1,43 +1,52 @@
 .what_i_do_card {
-  width: 640px;
-  margin-bottom: 96px;
+  width: 632px;
+  margin-bottom: 64px;
   margin-left: 36px;
   margin-right: 36px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  transition: transform 0.3s;
+  position: relative;
+  background-color: #232323;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .what_i_do_card_icon_container {
-  height: 104px;
-  width: 104px;
+  height: 72px;
+  width: 72px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #454545;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 .what_i_do_card_container_title {
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
 
 .what_i_do_card_icon {
   color: whitesmoke;
-  height: 72px;
-  width: 72px;
+  height: 48px;
+  width: 48px;
 }
 
 .what_i_do_card_container {
-  margin-left: 32px;
+  margin-left: 16px;
   width: 70%;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: flex-start;
   text-align: left;
+}
+
+.what_i_do_card:hover {
+  transform: translateY(-10px);
 }
 
 @media screen and (max-width: 1760px) {
@@ -72,13 +81,6 @@
     margin-bottom: 64px;
   }
 
-  .what_i_do_card_container {
-    margin-left: 24px;
-  }
-
-  .what_i_do_card_container_title {
-    margin-bottom: 24px;
-  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -103,10 +105,6 @@
 
   .what_i_do_card_container {
     margin-left: 16px;
-  }
-
-  .what_i_do_card_container_title {
-    margin-bottom: 16px;
   }
 }
 

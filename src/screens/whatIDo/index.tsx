@@ -15,7 +15,8 @@ function WhatIDo () {
         className={styles.what_i_do_container}
         style={{
           width: width > 960 ? `${width - 260}px` : `${width}px`,
-          height: `${height}px`,
+          minHeight: height,
+          height: "auto",
         }}
       >
         <div className={styles.what_i_do_title}>
@@ -23,10 +24,12 @@ function WhatIDo () {
         </div>
 
         <div className={styles.what_i_do_sub_container}>
-          <WhatIDoCard/>
-          <WhatIDoCard/>
-          <WhatIDoCard/>
-          <WhatIDoCard/>
+          <WhatIDoCard icon="ic:baseline-miscellaneous-services"/>
+          <WhatIDoCard icon="mdi:monitor-cellphone"/>
+          <WhatIDoCard icon="ic:outline-cloud"/>
+          <WhatIDoCard icon="lucide:database"/>
+          <WhatIDoCard icon="clarity:blocks-group-line"/>
+          <WhatIDoCard icon="fluent:shield-lock-28-regular"/>
         </div>
       </div>
     </>

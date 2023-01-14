@@ -6,6 +6,11 @@
   border-bottom: 1px solid #676767;
 }
 
+.what_i_do_title {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
 .what_i_do_sub_container {
   width: 100%;
   display: flex;

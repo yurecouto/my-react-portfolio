@@ -1,5 +1,7 @@
 .skill_card {
   padding: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
   background-color: blueviolet;
   display: flex;
   justify-content: center;

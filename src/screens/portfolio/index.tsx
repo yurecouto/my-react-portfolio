@@ -21,7 +21,7 @@ function Portfolio () {
         }}
       >
         <div className={styles.portfolio_container_title}>
-          <TitlePage text="Portfolio"/>
+          <TitlePage text="Portfolio:"/>
         </div>
 
         <div className={styles.portfolio_sub_container}>
@@ -36,11 +36,9 @@ function Portfolio () {
           <div className={styles.portfolio_card_container}>
             <PortfolioCard img="https://rafaelcruz.azurewebsites.net/wp-content/uploads/2020/02/apis-logo.jpg"/>
             <PortfolioCard img="https://igorgomes.eti.br/images/app-developing.png"/>
-            <PortfolioCard/>
-            <PortfolioCard/>
-            <PortfolioCard/>
-            <PortfolioCard/>
-            <PortfolioCard/>
+            <PortfolioCard img="https://maximizedesenvolvimentos.com.br/uploads/images/2019/05/o-que-e-data-science-1557521131.png"/>
+            <PortfolioCard img="https://www.springboard.com/blog/wp-content/uploads/2022/06/data-science-career-outlook.jpg"/>
+            <PortfolioCard img="https://th.jobsdb.com/th-th/wp-content/uploads/sites/3/2021/10/data_content-2.png"/>
           </div>
         </div>
       </div>

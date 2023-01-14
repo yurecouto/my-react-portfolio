@@ -2,6 +2,7 @@ import React from "react";
 import SkillCard from "../../components/cards/SkillCard";
 import TimelineCard from "../../components/cards/TimelineCard";
 import { SubTitleDefault } from "../../components/texts/SubTitleDefault";
+import { SubTitleSecondary } from "../../components/texts/SubTitleSecondary";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
 
@@ -22,7 +23,7 @@ function Curriculum () {
         }}
       >
         <div className={styles.curriculum_title}>
-          <TitlePage text="Curriculum"/>
+          <TitlePage text="Curriculum:"/>
         </div>
 
         <div className={styles.curriculum_sub_container}>
@@ -55,7 +56,7 @@ function Curriculum () {
 
             <div className={styles.curriculum_skills_container}>
               <div className={styles.curriculum_skills_container_title}>
-                <SubTitleDefault text="Back-end"/>
+                <SubTitleSecondary text="Back-end"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
                 <SkillCard skill="Golang"/>
@@ -67,7 +68,7 @@ function Curriculum () {
 
             <div className={styles.curriculum_skills_container}>
               <div className={styles.curriculum_skills_container_title}>
-                <SubTitleDefault text="Front-end"/>
+                <SubTitleSecondary text="Front-end"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
                 <SkillCard skill="React"/>
@@ -81,7 +82,7 @@ function Curriculum () {
 
             <div className={styles.curriculum_skills_container}>
               <div className={styles.curriculum_skills_container_title}>
-                <SubTitleDefault text="Data Base"/>
+                <SubTitleSecondary text="Data Base"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
                 <SkillCard skill="MongoDB"/>
@@ -92,7 +93,7 @@ function Curriculum () {
 
             <div className={styles.curriculum_skills_container}>
               <div className={styles.curriculum_skills_container_title}>
-                <SubTitleDefault text="Mobile"/>
+                <SubTitleSecondary text="Mobile"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
                 <SkillCard skill="Dart"/>
