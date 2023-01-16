@@ -9,4 +9,9 @@
   border-radius: 8px;
   margin-right: 8px;
   margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.skill_card:hover {
+  transform: scale(1.08);
 }

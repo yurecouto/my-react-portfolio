@@ -8,6 +8,8 @@ import { TitleDefault } from "../texts/TitleDefault";
 import { TextList } from "../texts/TextList";
 import { IconDefault } from "../texts/IconDefault";
 import { Icon } from "@iconify/react";
+import { SwitchTheme } from "../buttons/SwitchTheme";
+import { ChangeLanguage } from "../buttons/ChangeLanguage";
 
 interface Props {
   children?: ReactNode;
@@ -61,9 +63,8 @@ function Header({
         </div>
 
         <div className={styles.header_links_container}>
-          <IconDefault icon="mdi:linkedin" hoverColor="#0072b1"/>
-          <IconDefault icon="mdi:github" hoverColor="#63686a"/>
-          <IconDefault icon="mdi:twitter" hoverColor="#00acee"/>
+          <SwitchTheme/>
+          <ChangeLanguage/>
         </div>
       </header>
     ) : (
