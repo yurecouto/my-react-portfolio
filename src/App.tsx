@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { Suspense, useEffect } from "react";
+
 import { MainContainer } from "./components/containers/MainContainer";
 import { Header } from "./components/header";
 import AboutMe from "./screens/aboutMe";
@@ -16,7 +17,8 @@ function App() {
   }, []);
 
   return (
-    <>
+
+    <Suspense fallback="loading">
       <Header/>
       <MainContainer>
         <Home/>
@@ -26,7 +28,8 @@ function App() {
         <Portfolio/>
         <Contact/>
       </MainContainer>
-    </>
+    </Suspense>
+
   );
 }
 

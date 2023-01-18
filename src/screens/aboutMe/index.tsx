@@ -1,4 +1,6 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
+
 import { IconDefault } from "../../components/texts/IconDefault";
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitleDefault } from "../../components/texts/TitleDefault";
@@ -9,6 +11,7 @@ import styles from "./styles.module.css";
 
 function AboutMe () {
   const {height, width} = useWindowSize();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -21,7 +24,7 @@ function AboutMe () {
         }}
       >
         <div className={styles.about_me_title}>
-          <TitlePage text="About me:" />
+          <TitlePage text={`${t("AboutMe")}:`} />
         </div>
 
         <div className={styles.about_me_sub_container}>

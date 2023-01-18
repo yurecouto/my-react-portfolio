@@ -10,11 +10,13 @@ function ChangeLanguage() {
   const theme = useSelector(selectTheme);
   const localTheme = localStorage.getItem("THEME")
   const [nightMode, setNightMode] = useState<boolean>(localTheme === "dark");
-  const [isOpen, setIsOpen] = useState<boolean>(localTheme === "dark");
+  const [isOpen, setIsOpen] = useState<boolean>();
+
+  const userLang = navigator.language
+  console.log(userLang)
 
   return (
     <div onClick={() => setIsOpen(!isOpen)} className={styles.change_lang_container}>
-
       {isOpen ? (
         <div className={styles.change_lang_options_container}>
           <div className={styles.change_lang_option}>
@@ -31,11 +33,13 @@ function ChangeLanguage() {
           </div>
         </div>
       ) : (
-        <div className={styles.change_lang_selected}>
-          <p className={styles.change_lang_option_text}>Portugues</p>
-          <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-brazil"/>
-        </div>
+        <></>
       )}
+      <div className={styles.change_lang_selected}>
+        <p className={styles.change_lang_option_text}>Portugues</p>
+        <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-brazil"/>
+      </div>
+
     </div>
   )
 };
