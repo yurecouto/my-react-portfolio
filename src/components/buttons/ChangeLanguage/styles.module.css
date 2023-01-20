@@ -13,7 +13,9 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  margin-bottom: 92px;
+  margin-bottom: 94px;
+  margin-left: -17px;
+  border-radius: 16px;
 }
 
 .change_lang_option {
@@ -23,13 +25,16 @@
   align-items: center;
   height: 40px;
   width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #353535;
+  border-bottom: 1px solid gray;
 }
 
 .change_lang_option_text {
   padding: 0;
   margin: 0;
   font-family: Consolas, Monaco, monospace;
-
   font-size: 16px;
   color: whitesmoke;
 }
@@ -40,14 +45,12 @@
 }
 
 .change_lang_selected {
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.change_lang_line {
+  height: 40px;
   width: 100%;
-  border-bottom: 1px solid gray;
+  padding-left: 8px;
+  padding-right: 8px;
 }

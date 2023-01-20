@@ -10,6 +10,7 @@ import { IconDefault } from "../texts/IconDefault";
 import { Icon } from "@iconify/react";
 import { SwitchTheme } from "../buttons/SwitchTheme";
 import { ChangeLanguage } from "../buttons/ChangeLanguage";
+import { useTranslation } from "react-i18next";
 
 interface Props {
   children?: ReactNode;
@@ -18,8 +19,8 @@ interface Props {
 function Header({
   children,
   }: Props) {
-
-  const {width} = useWindowSize()
+  const { t } = useTranslation();
+  const {width} = useWindowSize();
 
   const [hoverIcon, setHoverIcon] = useState<boolean>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -53,12 +54,12 @@ function Header({
 
         <div className={styles.header_menu}>
           <ul className={styles.header_menu_ul}>
-            <TextList text="Home" handleSomething={() => handleScroll("section-home")}/>
-            <TextList text="About me" handleSomething={() => handleScroll("section-about-me")}/>
-            <TextList text="What I Do" handleSomething={() => handleScroll("section-what-i-do")}/>
-            <TextList text="Curriculum" handleSomething={() => handleScroll("section-curriculum")}/>
-            <TextList text="Portfolio" handleSomething={() => handleScroll("section-portfolio")}/>
-            <TextList text="Contact" handleSomething={() => handleScroll("section-contact")}/>
+            <TextList text={`${t("Home")}`} handleSomething={() => handleScroll("section-home")}/>
+            <TextList text={`${t("AboutMe")}`} handleSomething={() => handleScroll("section-about-me")}/>
+            <TextList text={`${t("WhatIDo")}`} handleSomething={() => handleScroll("section-what-i-do")}/>
+            <TextList text={`${t("Curriculum")}`} handleSomething={() => handleScroll("section-curriculum")}/>
+            <TextList text={`${t("Portfolio")}`} handleSomething={() => handleScroll("section-portfolio")}/>
+            <TextList text={`${t("Contact")}`} handleSomething={() => handleScroll("section-contact")}/>
           </ul>
         </div>
 
@@ -95,12 +96,12 @@ function Header({
             {isOpen && (
               <div className={styles.header_menu}>
                 <ul className={styles.header_menu_ul}>
-                  <TextList text="Home" handleSomething={() => handleScroll("section-home")}/>
-                  <TextList text="About me" handleSomething={() => handleScroll("section-about-me")}/>
-                  <TextList text="What I Do" handleSomething={() => handleScroll("section-what-i-do")}/>
-                  <TextList text="Curriculum" handleSomething={() => handleScroll("section-curriculum")}/>
-                  <TextList text="Portfolio" handleSomething={() => handleScroll("section-portfolio")}/>
-                  <TextList text="Contact" handleSomething={() => handleScroll("section-contact")}/>
+                  <TextList text={`${t("Home")}`} handleSomething={() => handleScroll("section-home")}/>
+                  <TextList text={`${t("AboutMe")}`} handleSomething={() => handleScroll("section-about-me")}/>
+                  <TextList text={`${t("WhatIDo")}`} handleSomething={() => handleScroll("section-what-i-do")}/>
+                  <TextList text={`${t("Curriculum")}`} handleSomething={() => handleScroll("section-curriculum")}/>
+                  <TextList text={`${t("Portfolio")}`} handleSomething={() => handleScroll("section-portfolio")}/>
+                  <TextList text={`${t("Contact")}`} handleSomething={() => handleScroll("section-contact")}/>
                 </ul>
               </div>
             )}

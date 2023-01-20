@@ -1,5 +1,17 @@
 {
   "translation": {
-    "AboutMe": "About me"
+    "Home": "Home",
+    "AboutMe": "About me",
+    "WhatIDo": "Whait I DO",
+    "Curriculum": "Curriculum",
+    "Portfolio": "Portfolio",
+    "Contact": "Contact",
+
+    "English": "English",
+    "Estonian": "Eesti keel",
+    "Portuguese": "Português",
+    "Spanish": "Español"
+
+
   }
 }

@@ -1,5 +1,15 @@
 {
   "translation": {
-    "AboutMe": "Minust"
+    "Home": "Home",
+    "AboutMe": "Minust",
+    "WhatIDo": "Minu Teenused",
+    "Curriculum": "Jätka",
+    "Portfolio": "Portfell",
+    "Contact": "Kontakti",
+
+    "English": "English",
+    "Estonian": "Eesti keel",
+    "Portuguese": "Português",
+    "Spanish": "Español"
   }
 }

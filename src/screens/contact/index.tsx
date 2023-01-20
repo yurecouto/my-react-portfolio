@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import ContactCard from "../../components/cards/ContactCard";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
@@ -6,6 +7,7 @@ import { useWindowSize } from "../../hooks/window";
 import styles from "./styles.module.css";
 
 function Contact () {
+  const { t } = useTranslation();
   const {height, width} = useWindowSize();
 
   return (
@@ -19,7 +21,7 @@ function Contact () {
         }}
       >
         <div className={styles.contact_title}>
-          <TitlePage text="Reach me in:"/>
+          <TitlePage text={`${t("Contact")}:`}/>
         </div>
 
         <div className={styles.contact_sub_container}>

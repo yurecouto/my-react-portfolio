@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import WhatIDoCard from "../../components/cards/WhatIDoCard";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
@@ -6,6 +7,7 @@ import { useWindowSize } from "../../hooks/window";
 import styles from "./styles.module.css";
 
 function WhatIDo () {
+  const { t } = useTranslation();
   const {height, width} = useWindowSize();
 
   return (
@@ -20,7 +22,7 @@ function WhatIDo () {
         }}
       >
         <div className={styles.what_i_do_title}>
-          <TitlePage text="What i do:" />
+          <TitlePage text={`${t("WhatIDo")}:`} />
         </div>
 
         <div className={styles.what_i_do_sub_container}>

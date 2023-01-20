@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import SkillCard from "../../components/cards/SkillCard";
 import TimelineCard from "../../components/cards/TimelineCard";
 import { SubTitleDefault } from "../../components/texts/SubTitleDefault";
@@ -9,6 +10,7 @@ import { useWindowSize } from "../../hooks/window";
 import styles from "./styles.module.css";
 
 function Curriculum () {
+  const { t } = useTranslation();
   const {height, width} = useWindowSize();
 
   return (
@@ -23,7 +25,7 @@ function Curriculum () {
         }}
       >
         <div className={styles.curriculum_title}>
-          <TitlePage text="Curriculum:"/>
+          <TitlePage text={`${t("Curriculum")}:`}/>
         </div>
 
         <div className={styles.curriculum_sub_container}>

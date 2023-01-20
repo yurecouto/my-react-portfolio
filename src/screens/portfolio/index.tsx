@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import PortfolioCard from "../../components/cards/PortfolioCard";
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitlePage } from "../../components/texts/TitlePage";
@@ -7,6 +8,7 @@ import { useWindowSize } from "../../hooks/window";
 import styles from "./styles.module.css";
 
 function Portfolio () {
+  const { t } = useTranslation();
   const {height, width} = useWindowSize();
 
   return (
@@ -21,7 +23,7 @@ function Portfolio () {
         }}
       >
         <div className={styles.portfolio_container_title}>
-          <TitlePage text="Portfolio:"/>
+          <TitlePage text={`${t("Portfolio")}:`}/>
         </div>
 
         <div className={styles.portfolio_sub_container}>
