@@ -18,53 +18,57 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const userLang = navigator.language;
+    const storageLang = localStorage.getItem("LANGUAGE") || ""
 
-    switch (userLang) {
-      case "pt_BR":
-        i18n.changeLanguage("pt_BR")
-        localStorage.setItem("LANGUAGE", JSON.stringify({
-          "code": "pt_BR",
-          "icon": "openmoji:flag-brazil",
-          "name": "Portuguese"
-        }))
-        break
+    if (!storageLang) {
+      const userLang = navigator.language;
 
-      case "en_US":
-        i18n.changeLanguage("en_US")
-        localStorage.setItem("LANGUAGE", JSON.stringify({
-          "code": "en_US",
-          "icon": "openmoji:flag-canada",
-          "name": "English"
-        }))
-        break
+      switch (userLang) {
+        case "pt-BR":
+          i18n.changeLanguage("pt_BR")
+          localStorage.setItem("LANGUAGE", JSON.stringify({
+            "code": "pt_BR",
+            "icon": "openmoji:flag-brazil",
+            "name": "Portuguese"
+          }))
+          break
 
-      case "es_ES":
-        i18n.changeLanguage("es_ES")
-        localStorage.setItem("LANGUAGE", JSON.stringify({
-          "code": "es_ES",
-          "icon": "openmoji:flag-spain",
-          "name": "Spanish"
-        }))
-        break
+        case "en-US":
+          i18n.changeLanguage("en_US")
+          localStorage.setItem("LANGUAGE", JSON.stringify({
+            "code": "en_US",
+            "icon": "openmoji:flag-canada",
+            "name": "English"
+          }))
+          break
 
-      case "et":
-        i18n.changeLanguage("et")
-        localStorage.setItem("LANGUAGE", JSON.stringify({
-          "code": "et",
-          "icon": "openmoji:flag-estonia",
-          "name": "Estonian"
-        }))
-        break
+        case "es-ES":
+          i18n.changeLanguage("es_ES")
+          localStorage.setItem("LANGUAGE", JSON.stringify({
+            "code": "es_ES",
+            "icon": "openmoji:flag-spain",
+            "name": "Spanish"
+          }))
+          break
 
-      default:
-        i18n.changeLanguage("pt_BR")
-        localStorage.setItem("LANGUAGE", JSON.stringify({
-          "code": "pt_BR",
-          "icon": "openmoji:flag-brazil",
-          "name": "Portuguese"
-        }))
-        break
+        case "et":
+          i18n.changeLanguage("et")
+          localStorage.setItem("LANGUAGE", JSON.stringify({
+            "code": "et",
+            "icon": "openmoji:flag-estonia",
+            "name": "Estonian"
+          }))
+          break
+
+        default:
+          i18n.changeLanguage("pt_BR")
+          localStorage.setItem("LANGUAGE", JSON.stringify({
+            "code": "pt_BR",
+            "icon": "openmoji:flag-brazil",
+            "name": "Portuguese"
+          }))
+          break
+      }
     }
   })
 

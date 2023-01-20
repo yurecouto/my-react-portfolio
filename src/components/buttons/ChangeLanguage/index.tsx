@@ -27,21 +27,41 @@ function ChangeLanguage() {
       case "pt_BR":
         setActualLang(lang)
         i18n.changeLanguage("pt_BR")
+        localStorage.setItem("LANGUAGE", JSON.stringify({
+          "code": "pt_BR",
+          "icon": "openmoji:flag-brazil",
+          "name": "Portuguese"
+        }))
         break
 
       case "en_US":
         setActualLang(lang)
         i18n.changeLanguage("en_US")
+        localStorage.setItem("LANGUAGE", JSON.stringify({
+          "code": "en_US",
+          "icon": "openmoji:flag-canada",
+          "name": "English"
+        }))
         break
 
       case "es_ES":
         setActualLang(lang)
         i18n.changeLanguage("es_ES")
+        localStorage.setItem("LANGUAGE", JSON.stringify({
+          "code": "es_ES",
+          "icon": "openmoji:flag-spain",
+          "name": "Spanish"
+        }))
         break
 
       case "et":
         setActualLang(lang)
         i18n.changeLanguage("et")
+        localStorage.setItem("LANGUAGE", JSON.stringify({
+          "code": "et",
+          "icon": "openmoji:flag-estonia",
+          "name": "Estonian"
+        }))
         break
     }
   }
@@ -57,7 +77,7 @@ function ChangeLanguage() {
             <p className={styles.change_lang_option_text}>Portugues</p>
             <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-brazil"/>
           </div>
-
+          <div className={styles.change_lang_line}/>
           <div
             className={styles.change_lang_option}
             onClick={() => handleChangeLang({code: "et", icon: "openmoji:flag-estonia", name: "Estoniano"})}
@@ -65,7 +85,7 @@ function ChangeLanguage() {
             <p className={styles.change_lang_option_text}>Estoniano</p>
             <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-estonia"/>
           </div>
-
+          <div className={styles.change_lang_line}/>
           <div
             className={styles.change_lang_option}
             onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-canada", name: "Ingles"})}
@@ -73,7 +93,7 @@ function ChangeLanguage() {
             <p className={styles.change_lang_option_text}>Ingles</p>
             <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-canada"/>
           </div>
-
+          <div className={styles.change_lang_line}/>
           <div
             className={styles.change_lang_option}
             onClick={() => handleChangeLang({code: "es_ES", icon: "openmoji:flag-spain", name: "Espanhol"})}
