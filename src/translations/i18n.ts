@@ -8,7 +8,6 @@ import estonian from "./et/estonian.json";
 import spanish from "./es/spanish.json";
 import portuguese from "./pt/portuguese.json";
 
-
 i18n
   .use(initReactI18next)
   .use(Backend)
