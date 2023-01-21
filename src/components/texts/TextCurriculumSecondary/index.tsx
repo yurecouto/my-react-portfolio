@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
@@ -11,11 +13,13 @@ function TextCurriculumSecondary({
   text,
   textAlign = "center"
   }: Props) {
+  const theme = useSelector(selectTheme);
 
   return (
     <h2
       className={styles.text_curriculum_secondary}
       style={{
+        color: theme.COLORS.TEXT_DEFAULT,
         textAlign: textAlign
       }}
     >

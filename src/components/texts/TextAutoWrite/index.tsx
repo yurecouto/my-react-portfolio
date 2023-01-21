@@ -1,4 +1,6 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
@@ -11,11 +13,13 @@ function TextAutoWrite({
   text,
   textAlign = "center"
   }: Props) {
+  const theme = useSelector(selectTheme);
 
   return (
     <div
       className={styles.typing_text}
       style={{
+        color: theme.COLORS.TEXT_DEFAULT,
         width: `${text?.length}ch`,
       }}
     >

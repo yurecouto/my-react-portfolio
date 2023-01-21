@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
@@ -13,6 +15,8 @@ function TextList({
   textAlign = "center",
   handleSomething
   }: Props) {
+  const theme = useSelector(selectTheme);
+
   const [hover, setHover] = useState<boolean>();
 
   const handleMouseIn = () => {
@@ -34,7 +38,9 @@ function TextList({
         className={styles.text_list}
         style={{
           textAlign: textAlign,
-          color: hover ? "red" : "whitesmoke"
+          color: hover
+            ? theme.COLORS.TEXT_HIGHLIGHT
+            : theme.COLORS.TEXT_DEFAULT,
         }}
       >
         {text}

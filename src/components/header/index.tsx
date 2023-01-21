@@ -11,6 +11,8 @@ import { Icon } from "@iconify/react";
 import { SwitchTheme } from "../buttons/SwitchTheme";
 import { ChangeLanguage } from "../buttons/ChangeLanguage";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../providers/slices/theme.slice";
 
 interface Props {
   children?: ReactNode;
@@ -21,6 +23,7 @@ function Header({
   }: Props) {
   const { t } = useTranslation();
   const {width} = useWindowSize();
+  const theme = useSelector(selectTheme);
 
   const [hoverIcon, setHoverIcon] = useState<boolean>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -46,7 +49,10 @@ function Header({
 
   return (
     width > 960 ? (
-      <header className={styles.header}>
+      <header
+        style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND }}
+        className={styles.header}
+      >
         <div className={styles.header_profile_pic_container} >
           <img className={styles.header_profile_pic} src={avatar} alt=""/>
           <TitleDefault text={"Yure Couto"}/>

@@ -8,7 +8,6 @@
   overflow: hidden;
   animation: typing 2.5s steps(31, end),
   cursor-blink 0.3s step-end infinite alternate;
-  color: whitesmoke;
 }
 
 @keyframes typing {
