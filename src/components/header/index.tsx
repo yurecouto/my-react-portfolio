@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 
 import { useWindowSize } from "../../hooks/window"
 
@@ -6,7 +6,6 @@ import styles from "./styles.module.css";
 import avatar from "../../static/avatar.png"
 import { TitleDefault } from "../texts/TitleDefault";
 import { TextList } from "../texts/TextList";
-import { IconDefault } from "../texts/IconDefault";
 import { Icon } from "@iconify/react";
 import { SwitchTheme } from "../buttons/SwitchTheme";
 import { ChangeLanguage } from "../buttons/ChangeLanguage";
@@ -14,15 +13,10 @@ import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { selectTheme } from "../../providers/slices/theme.slice";
 
-interface Props {
-  children?: ReactNode;
-}
 
-function Header({
-  children,
-  }: Props) {
+function Header() {
   const { t } = useTranslation();
-  const {width} = useWindowSize();
+  const { width } = useWindowSize();
   const theme = useSelector(selectTheme);
 
   const [hoverIcon, setHoverIcon] = useState<boolean>();
@@ -82,9 +76,8 @@ function Header({
 
         <div className={styles.header_links_container_main}>
           <div className={styles.header_links_container}>
-            <IconDefault icon="mdi:linkedin" hoverColor="#0072b1"/>
-            <IconDefault icon="mdi:github" hoverColor="#63686a"/>
-            <IconDefault icon="mdi:twitter" hoverColor="#00acee"/>
+            <SwitchTheme/>
+            <ChangeLanguage/>
           </div>
 
           <div>

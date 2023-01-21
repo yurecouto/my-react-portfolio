@@ -4,6 +4,7 @@ import i18n from "../../../translations/i18n";
 
 import styles from "./styles.module.css";
 import { useTranslation } from "react-i18next";
+import { useWindowSize } from "../../../hooks/window";
 
 interface Language {
   code: string,
@@ -13,6 +14,7 @@ interface Language {
 
 function ChangeLanguage() {
   const { t } = useTranslation();
+  const { width } = useWindowSize();
 
   const storageLang = localStorage.getItem("LANGUAGE") || ""
 
@@ -56,7 +58,8 @@ function ChangeLanguage() {
   console.log(t(actualLang.name))
 
   return (
-    <div onClick={() => setIsOpen(!isOpen)} className={styles.change_lang_container}>
+    width > 960 ? (
+      <div onClick={() => setIsOpen(!isOpen)} className={styles.change_lang_container}>
       {isOpen ? (
         <div className={styles.change_lang_options_container}>
           <div
@@ -99,7 +102,48 @@ function ChangeLanguage() {
         <Icon className={styles.change_lang_option_icon} icon={actualLang.icon}/>
       </div>
 
-    </div>
+      </div>
+    ) : (
+      <div onClick={() => setIsOpen(!isOpen)} className={styles.change_lang_container}>
+        <div className={styles.change_lang_selected}>
+          <Icon className={styles.change_lang_option_icon} icon={actualLang.icon}/>
+        </div>
+
+        {isOpen ? (
+          <div className={styles.change_lang_options_container}>
+            <div
+              className={styles.change_lang_option}
+              style={{borderTopLeftRadius: 8, borderTopRightRadius: 8}}
+              onClick={() => handleChangeLang({code: "pt_BR", icon: "openmoji:flag-brazil", name: "Portuguese"})}
+            >
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-brazil"/>
+            </div>
+            <div
+              className={styles.change_lang_option}
+              onClick={() => handleChangeLang({code: "et", icon: "openmoji:flag-estonia", name: "Estonian"})}
+            >
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-estonia"/>
+            </div>
+            <div
+              className={styles.change_lang_option}
+              onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-canada", name: "English"})}
+            >
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-canada"/>
+            </div>
+            <div
+              className={styles.change_lang_option}
+              style={{border: 0, borderEndEndRadius: 8, borderEndStartRadius: 8}}
+              onClick={() => handleChangeLang({code: "es_ES", icon: "openmoji:flag-spain", name: "Spanish"})}
+            >
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-spain"/>
+            </div>
+
+          </div>
+        ) : (
+          <></>
+        )}
+      </div>
+    )
   )
 };
 

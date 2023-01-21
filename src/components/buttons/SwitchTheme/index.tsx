@@ -24,11 +24,11 @@ function SwitchTheme() {
       >
         <Icon
           icon="ph:moon-fill"
-          className={styles.switch_icons}
+          className={styles.switch_icon_moon}
         />
         <Icon
           icon="ph:sun-fill"
-          className={styles.switch_icons}
+          className={styles.switch_icon_sun}
         />
       </label>
     </div>
