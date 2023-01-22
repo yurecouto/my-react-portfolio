@@ -9,8 +9,18 @@
   border-end-start-radius: 16px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  background-color: #343434;
   transition: 0.3s;
+}
+
+.portfolio_card_skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .portfolio_card_info {
@@ -22,7 +32,7 @@
 
 .portfolio_card_name {
   margin-left: 8px;
-  margin-top: 16px;
+  margin-top: 8px;
   margin-bottom: 16px;
   width: auto;
 

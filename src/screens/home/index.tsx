@@ -1,14 +1,17 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { TextAutoWrite } from "../../components/texts/TextAutoWrite";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
+import { selectTheme } from "../../providers/slices/theme.slice";
 
 import keyboard from "../../static/keyboard.jpg"
 
 import styles from "./styles.module.css";
 
 function Home () {
-  const {height, width} = useWindowSize();
+  const { height, width } = useWindowSize();
+  const theme = useSelector(selectTheme);
 
   return (
     <>
@@ -23,6 +26,7 @@ function Home () {
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          borderBottom: `1px solid ${theme.COLORS.PAGE_SEPARATOR}`
         }}
       >
         <div className={styles.cover_letter_sub_container}>

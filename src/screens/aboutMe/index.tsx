@@ -1,17 +1,20 @@
 import React from "react";
 import { useTranslation } from 'react-i18next';
+import { useSelector } from "react-redux";
 
 import { IconDefault } from "../../components/texts/IconDefault";
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitleDefault } from "../../components/texts/TitleDefault";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
+import { selectTheme } from "../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
 function AboutMe () {
-  const {height, width} = useWindowSize();
+  const { height, width } = useWindowSize();
   const { t } = useTranslation();
+  const theme = useSelector(selectTheme);
 
   return (
     <>
@@ -21,6 +24,7 @@ function AboutMe () {
         style={{
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           height: width > 960 ? `${height}px` : "auto",
+          borderBottom: `1px solid ${theme.COLORS.PAGE_SEPARATOR}`
         }}
       >
         <div className={styles.about_me_title}>

@@ -1,36 +1,62 @@
+import React, { useState } from "react";
 import { Icon } from "@iconify/react";
-import React, { ReactNode } from "react";
 
 import { TextSecondary } from "../../texts/TextSecondary";
 import { TitleSecondary } from "../../texts/TitleSecondary";
 
 import styles from "./styles.module.css";
+import { useSelector } from "react-redux";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 
 interface Props {
-  children?: ReactNode;
-  icon: string
+  icon: string;
+  title: string;
+  text: string;
 }
 
 function WhatIDoCard({
-  children,
-  icon
+  icon,
+  title,
+  text
   }: Props) {
+  const theme = useSelector(selectTheme);
+
+  const [hover, setHover] = useState<boolean>();
+
+  const handleMouseIn = () => {
+    setHover(true);
+  };
+
+  const handleMouseOut = () => {
+    setHover(false);
+  };
 
   return (
-    <div className={styles.what_i_do_card}>
-      <div className={styles.what_i_do_card_icon_container}>
+    <div
+      className={styles.what_i_do_card}
+      onMouseOver={handleMouseIn}
+      onMouseOut={handleMouseOut}
+      style={{ backgroundColor: theme.COLORS.CARD_BACKGROUND }}
+    >
+      <div
+        className={styles.what_i_do_card_icon_container}
+        style={{ backgroundColor: theme.COLORS.CARD_SECONDARY }}
+      >
         <Icon
           icon={icon}
+          style={{ color: hover
+            ? theme.COLORS.TEXT_SUB_HIGHLIGHT
+            : theme.COLORS.TEXT_DEFAULT }}
           className={styles.what_i_do_card_icon}
         />
       </div>
 
       <div className={styles.what_i_do_card_container}>
         <div className={styles.what_i_do_card_container_title}>
-          <TitleSecondary textAlign="left" text="Web Development" />
+          <TitleSecondary textAlign="left" text={title} />
         </div>
         <div className={styles.what_i_do_card_container_text}>
-          <TextSecondary textAlign="left" text="Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."/>
+          <TextSecondary textAlign="left" text={text}/>
         </div>
       </div>
     </div>

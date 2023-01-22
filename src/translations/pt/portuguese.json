@@ -10,7 +10,23 @@
     "English": "English",
     "Estonian": "Eesti keel",
     "Portuguese": "Português",
-    "Spanish": "Español"
+    "Spanish": "Español",
+
+    "APIRestDevelopment": "Desenvolvimento de API Rest",
+    "FrontEndDevelopment": "Desenvolvimento Front-End",
+    "CloudArchitecture": "Arquitetura em Nuvem",
+    "DatabaseManagement": "Gerenciamento de Banco de Dados",
+    "ScalableMicroservices": "Microsserviços Escaláveis",
+    "SecureApplications": "Aplicações Seguras",
+
+    "APIRestDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "FrontEndDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "CloudArchitectureDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "DatabaseManagementDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "ScalableMicroservicesDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam"
+
+
 
   }
 }

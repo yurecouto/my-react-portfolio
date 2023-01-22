@@ -10,6 +10,22 @@
     "English": "English",
     "Estonian": "Eesti keel",
     "Portuguese": "Português",
-    "Spanish": "Español"
+    "Spanish": "Español",
+
+    "APIRestDevelopment": "API Rest Arendus",
+    "FrontEndDevelopment": "Front-End Arendus",
+    "CloudArchitecture": "Pilve Arhitektuur",
+    "DatabaseManagement": "Andmebaasi Haldamine",
+    "ScalableMicroservices": "Skaleeritavad Mikroteenused",
+    "SecureApplications": "Turvalised Rakendused",
+
+    "APIRestDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "FrontEndDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "CloudArchitectureDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "DatabaseManagementDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "ScalableMicroservicesDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam"
+
+
   }
 }

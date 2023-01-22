@@ -1,15 +1,18 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import PortfolioCard from "../../components/cards/PortfolioCard";
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
+import { selectTheme } from "../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
 function Portfolio () {
   const { t } = useTranslation();
-  const {height, width} = useWindowSize();
+  const { height, width } = useWindowSize();
+  const theme = useSelector(selectTheme);
 
   return (
     <>
@@ -20,6 +23,7 @@ function Portfolio () {
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           minHeight: height,
           height: "auto",
+          borderBottom: `1px solid ${theme.COLORS.PAGE_SEPARATOR}`
         }}
       >
         <div className={styles.portfolio_container_title}>
@@ -36,11 +40,19 @@ function Portfolio () {
           </div>
 
           <div className={styles.portfolio_card_container}>
-            <PortfolioCard img="https://rafaelcruz.azurewebsites.net/wp-content/uploads/2020/02/apis-logo.jpg"/>
-            <PortfolioCard img="https://igorgomes.eti.br/images/app-developing.png"/>
-            <PortfolioCard img="https://maximizedesenvolvimentos.com.br/uploads/images/2019/05/o-que-e-data-science-1557521131.png"/>
-            <PortfolioCard img="https://www.springboard.com/blog/wp-content/uploads/2022/06/data-science-career-outlook.jpg"/>
-            <PortfolioCard img="https://th.jobsdb.com/th-th/wp-content/uploads/sites/3/2021/10/data_content-2.png"/>
+            <PortfolioCard
+              img="https://rafaelcruz.azurewebsites.net/wp-content/uploads/2020/02/apis-logo.jpg"
+              title="Node API Rest"
+              description="Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+              skills={["Node", "TypeScript", "Express", "JWT", "MongoDB"]}
+            />
+
+            <PortfolioCard
+              img="https://miro.medium.com/max/1400/1*jWZIbgnF4UCFnMXC2pZXRg.png"
+              title="Client React"
+              description="Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
+              skills={["React", "TypeScript", "Axios", "Token/Refresh Token", "Chart.js", "Flexbox"]}
+            />
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
-import React, { ReactNode } from "react";
+import React from "react";
+import { useTranslation } from "react-i18next";
 import { TextCurriculum } from "../../texts/TextCurriculum";
 import { TextCurriculumSecondary } from "../../texts/TextCurriculumSecondary";
 import { TitleCurriculum } from "../../texts/TitleCurriculum";
@@ -6,12 +7,19 @@ import { TitleCurriculum } from "../../texts/TitleCurriculum";
 import styles from "./styles.module.css";
 
 interface Props {
-  children?: ReactNode;
+  position?: string;
+  company?: string;
+  period?: string;
+  description: string;
 }
 
 function TimelineCard({
-  children,
+  position,
+  company,
+  period,
+  description
   }: Props) {
+  // const { t } = useTranslation();
 
   return (
     <div className={styles.timeline_card}>
@@ -19,10 +27,10 @@ function TimelineCard({
 
         <div className={styles.timeline_card_column}>
           <div className={styles.timeline_card_when}>
-            <TextCurriculumSecondary textAlign="right" text="ago/2022 dec/2023" />
+            <TextCurriculumSecondary textAlign="right" text={period} />
           </div>
           <div className={styles.timeline_card_where}>
-            <TextCurriculumSecondary textAlign="right" text="Spro It Solutions" />
+            <TextCurriculumSecondary textAlign="right" text={company} />
           </div>
         </div>
 
@@ -39,10 +47,10 @@ function TimelineCard({
 
         <div className={styles.timeline_card_column}>
           <div className={styles.timeline_card_name}>
-            <TitleCurriculum textAlign="left" text="Full Stack developer" />
+            <TitleCurriculum textAlign="left" text={position} />
           </div>
           <div className={styles.timeline_card_description}>
-            <TextCurriculum textAlign="left" text="Integrando o time de Inovação da SPRO, atuando no Back-end, com API RESTs em Node com TypeScript, banco de dados MongoDB, e no Mobile em React Native construindo um aplicativo multiplataforma para consumir dados de sensores em campo e enviar informações e comandos para equipamentos, tudo utilizando padrões SOLID e clean code. "/>
+            <TextCurriculum textAlign="left" text={description}/>
           </div>
         </div>
 

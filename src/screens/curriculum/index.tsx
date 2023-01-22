@@ -1,17 +1,20 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useSelector } from "react-redux";
 import SkillCard from "../../components/cards/SkillCard";
 import TimelineCard from "../../components/cards/TimelineCard";
 import { SubTitleDefault } from "../../components/texts/SubTitleDefault";
 import { SubTitleSecondary } from "../../components/texts/SubTitleSecondary";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
+import { selectTheme } from "../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
 function Curriculum () {
   const { t } = useTranslation();
-  const {height, width} = useWindowSize();
+  const { height, width } = useWindowSize();
+  const theme = useSelector(selectTheme);
 
   return (
     <>
@@ -22,6 +25,7 @@ function Curriculum () {
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           minHeight: height,
           height: "auto",
+          borderBottom: `1px solid ${theme.COLORS.PAGE_SEPARATOR}`
         }}
       >
         <div className={styles.curriculum_title}>
@@ -35,8 +39,12 @@ function Curriculum () {
                 <SubTitleDefault text="Experience"/>
               </div>
               <div className={styles.curriculum_professional_cards}>
-                <TimelineCard />
-                <TimelineCard />
+                <TimelineCard
+                  position=""
+                  company=""
+                  period=""
+                  description="Mundo"
+                />
               </div>
             </div>
             <div className={styles.curriculum_education}>
@@ -44,7 +52,7 @@ function Curriculum () {
                 <SubTitleDefault text="Education"/>
               </div>
               <div className={styles.curriculum_education_cards}>
-                <TimelineCard />
+
               </div>
             </div>
           </div>

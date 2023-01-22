@@ -79,10 +79,10 @@ function ChangeLanguage() {
           </div>
           <div
             className={styles.change_lang_option}
-            onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-canada", name: "English"})}
+            onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-united-kingdom", name: "English"})}
           >
             <p className={styles.change_lang_option_text}>{t("English")}</p>
-            <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-canada"/>
+            <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-united-kingdom"/>
           </div>
           <div
             className={styles.change_lang_option}
@@ -126,9 +126,9 @@ function ChangeLanguage() {
             </div>
             <div
               className={styles.change_lang_option}
-              onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-canada", name: "English"})}
+              onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-united-kingdom", name: "English"})}
             >
-              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-canada"/>
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-united-kingdom"/>
             </div>
             <div
               className={styles.change_lang_option}

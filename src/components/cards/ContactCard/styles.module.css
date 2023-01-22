@@ -7,16 +7,24 @@
   padding-left: 16px;
   padding-right: 16px;
   border-radius: 8px;
-  height: 64px;
+  height: 56px;
   margin-bottom: 32px;
   width: 30%;
-  background-color: #353535;
   transition: 0.2s;
 }
 
+.contact_card_link {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
 .contact_icon {
-  height: 48px;
-  width: 48px;
+  height: 36px;
+  width: 36px;
 }
 
 .contact_sub_container_icon {
