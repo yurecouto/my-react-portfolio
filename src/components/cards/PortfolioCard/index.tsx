@@ -48,13 +48,13 @@ function PortfolioCard({
       </div>
 
       <div className={styles.portfolio_card_info}>
-        {hover && (
+        {/* {hover && ( */}
           <div className={styles.portfolio_card_skills}>
             {skills?.map(skill => (
               <SkillCard skill={skill}/>
             ))}
           </div>
-        )}
+        {/* )} */}
         <div className={styles.portfolio_card_name}>
           <TitlePortfolio textAlign="left" text={title} />
         </div>

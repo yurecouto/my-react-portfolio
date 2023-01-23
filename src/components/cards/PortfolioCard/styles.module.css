@@ -35,7 +35,6 @@
   margin-top: 8px;
   margin-bottom: 16px;
   width: auto;
-
 }
 
 .portfolio_card_description {
@@ -53,4 +52,3 @@
 .portfolio_card:hover {
   transform: scale(1.04);
 }
-
