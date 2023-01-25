@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+
+import { useWindowSize } from "../../hooks/window";
+import { selectTheme } from "../../providers/slices/theme.slice";
+
 import DetailsCard from "../../components/cards/DetailsCard";
 import PortfolioCard from "../../components/cards/PortfolioCard";
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitlePage } from "../../components/texts/TitlePage";
-import { useWindowSize } from "../../hooks/window";
-import Project from "../../interfaces/project";
-import { selectTheme } from "../../providers/slices/theme.slice";
+
+import Project from "../../interfaces/Project";
 
 import styles from "./styles.module.css";
 

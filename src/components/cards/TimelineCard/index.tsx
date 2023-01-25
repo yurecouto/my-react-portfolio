@@ -1,4 +1,5 @@
 import React from "react";
+import Timeline from "../../../interfaces/Timeline";
 import { TextCurriculum } from "../../texts/TextCurriculum";
 import { TextCurriculumSecondary } from "../../texts/TextCurriculumSecondary";
 import { TitleCurriculum } from "../../texts/TitleCurriculum";
@@ -6,17 +7,11 @@ import { TitleCurriculum } from "../../texts/TitleCurriculum";
 import styles from "./styles.module.css";
 
 interface Props {
-  position?: string;
-  company?: string;
-  period?: string;
-  description: string;
+  timeline: Timeline
 }
 
 function TimelineCard({
-  position,
-  company,
-  period,
-  description
+  timeline
   }: Props) {
   // const { t } = useTranslation();
 
@@ -26,10 +21,10 @@ function TimelineCard({
 
         <div className={styles.timeline_card_column}>
           <div className={styles.timeline_card_when}>
-            <TextCurriculumSecondary textAlign="right" text={period} />
+            <TextCurriculumSecondary textAlign="right" text={timeline.when} />
           </div>
           <div className={styles.timeline_card_where}>
-            <TextCurriculumSecondary textAlign="right" text={company} />
+            <TextCurriculumSecondary textAlign="right" text={timeline.where} />
           </div>
         </div>
 
@@ -46,10 +41,10 @@ function TimelineCard({
 
         <div className={styles.timeline_card_column}>
           <div className={styles.timeline_card_name}>
-            <TitleCurriculum textAlign="left" text={position} />
+            <TitleCurriculum textAlign="left" text={timeline.what} />
           </div>
           <div className={styles.timeline_card_description}>
-            <TextCurriculum textAlign="left" text={description}/>
+            <TextCurriculum textAlign="left" text={timeline.description}/>
           </div>
         </div>
 

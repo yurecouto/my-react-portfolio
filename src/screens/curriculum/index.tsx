@@ -7,6 +7,7 @@ import { SubTitleDefault } from "../../components/texts/SubTitleDefault";
 import { SubTitleSecondary } from "../../components/texts/SubTitleSecondary";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
+import Timeline from "../../interfaces/Timeline";
 import { selectTheme } from "../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
@@ -15,6 +16,21 @@ function Curriculum () {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
+
+  const timelines: Timeline[] = [
+    {
+      what: "Full Stack Developer",
+      where: "SPRO IT Solutions",
+      when: "ago - 2022 / now",
+      description: "Integrando o time de Inovação da SPRO, atuando no Back-end, com API RESTs em Node com TypeScript, banco de dados MongoDB, e no Mobile em React Native construindo um aplicativo multiplataforma para consumir dados de sensores em campo e enviar informações e comandos para equipamentos, tudo utilizando padrões SOLID e clean code. "
+    },
+    {
+      what: "Análise e Desenvolvimento de Sistemas",
+      where: "UNIDESC - Centro Universitário de Desenvolvimento do Centro-Oeste",
+      when: "jan - 2022 / now",
+      description: "Buscando avançar na jornada de conhecimento que iniciei com meus estudos autodidatas em programação, ingressei no curso de Análise e Desenvolvimento de Sistemas."
+    },
+  ]
 
   return (
     <>
@@ -40,10 +56,7 @@ function Curriculum () {
               </div>
               <div className={styles.curriculum_professional_cards}>
                 <TimelineCard
-                  position=""
-                  company=""
-                  period=""
-                  description="Mundo"
+                  timeline={timelines[0]}
                 />
               </div>
             </div>
@@ -52,7 +65,9 @@ function Curriculum () {
                 <SubTitleDefault text="Education"/>
               </div>
               <div className={styles.curriculum_education_cards}>
-
+                <TimelineCard
+                  timeline={timelines[1]}
+                />
               </div>
             </div>
           </div>

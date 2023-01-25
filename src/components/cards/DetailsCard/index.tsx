@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import Project from "../../../interfaces/project";
+import Project from "../../../interfaces/Project";
 import { selectTheme } from "../../../providers/slices/theme.slice";
 import { TextPortfolio } from "../../texts/TextPortfolio";
 import { TitleSecondary } from "../../texts/TitleSecondary";
