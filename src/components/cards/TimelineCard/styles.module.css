@@ -20,12 +20,10 @@
 
 .timeline_card_where {
   width: 160px;
-  height: 64px;
+  height: 120px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
   justify-content: flex-end;
-
 }
 
 .timeline_card_when {

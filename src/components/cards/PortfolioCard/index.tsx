@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import Project from "../../../interfaces/Project";
 import { selectTheme } from "../../../providers/slices/theme.slice";
@@ -13,6 +14,7 @@ interface Props {
 }
 
 function PortfolioCard({ project, onClick }: Props) {
+  const { t } = useTranslation();
   const theme = useSelector(selectTheme);
 
   return (
@@ -22,6 +24,10 @@ function PortfolioCard({ project, onClick }: Props) {
       onClick={onClick}
     >
       <div className={styles.portfolio_card_image}>
+        <div className={styles.portfolio_card_see_details}>
+          <TextPortfolio textAlign="left" text={`${t("ClickToSee")}`}/>
+        </div>
+
         <img
           className={styles.portfolio_card_image}
           src={project.image} alt=""

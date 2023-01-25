@@ -49,6 +49,18 @@
   border-top-right-radius: 16px;
 }
 
+.portfolio_card_see_details {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  position: fixed;
+  height: 32px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 .portfolio_card:hover {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }

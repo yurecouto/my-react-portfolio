@@ -52,7 +52,7 @@ function Curriculum () {
           <div className={styles.curriculum_timeline_container}>
             <div className={styles.curriculum_professional}>
               <div className={styles.curriculum_professional_title}>
-                <SubTitleDefault text="Experience"/>
+                <SubTitleDefault text={`${t("Experience")}`}/>
               </div>
               <div className={styles.curriculum_professional_cards}>
                 <TimelineCard
@@ -62,7 +62,7 @@ function Curriculum () {
             </div>
             <div className={styles.curriculum_education}>
               <div className={styles.curriculum_education_title}>
-                <SubTitleDefault text="Education"/>
+                <SubTitleDefault text={`${t("Education")}`}/>
               </div>
               <div className={styles.curriculum_education_cards}>
                 <TimelineCard
@@ -76,7 +76,7 @@ function Curriculum () {
 
           <div className={styles.curriculum_skills}>
             <div className={styles.curriculum_skills_title}>
-              <SubTitleDefault text="Skills"/>
+              <SubTitleDefault text={`${t("Technologies")}`}/>
             </div>
 
             <div className={styles.curriculum_skills_container}>

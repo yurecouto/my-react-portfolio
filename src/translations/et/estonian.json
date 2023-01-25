@@ -7,6 +7,11 @@
     "Portfolio": "Portfell",
     "Contact": "Kontakti",
 
+    "Name": "Nimi",
+    "Email": "E-mail",
+    "BasedIn": "Sisse elades",
+    "DownloadCV": "Laadige alla minu CV",
+
     "English": "English",
     "Estonian": "Eesti keel",
     "Portuguese": "Português",
@@ -24,7 +29,15 @@
     "CloudArchitectureDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
     "DatabaseManagementDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
     "ScalableMicroservicesDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam"
+    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+
+    "Experience": "Kogemusi",
+    "Education": "Koolitus",
+    "Technologies": "Tehnoloogiad",
+
+    "ClickToSee": "Lisateabe saamiseks klõpsake"
+
+
 
 
   }

@@ -43,7 +43,7 @@ function AboutMe () {
             <div className={styles.about_me_info_row_container}>
               <div className={styles.about_me_info_row}>
                 <div className={styles.about_me_info_row_key}>
-                  <TextDefault text="Name:"/>
+                  <TextDefault text={`${t("Name")}:`}/>
                 </div>
                 <div className={styles.about_me_info_row_key}>
                   <TextDefault text="Yure Barbosa Couto"/>
@@ -53,7 +53,7 @@ function AboutMe () {
 
               <div className={styles.about_me_info_row}>
                 <div className={styles.about_me_info_row_key}>
-                  <TextDefault text="E-mail:"/>
+                  <TextDefault text={`${t("Email")}:`}/>
                 </div>
                 <div className={styles.about_me_info_row_key}>
                   <TextDefault text="yure.couto@outlook.com"/>
@@ -63,7 +63,7 @@ function AboutMe () {
 
               <div className={styles.about_me_info_row}>
                 <div className={styles.about_me_info_row_key}>
-                  <TextDefault text="Based in:"/>
+                  <TextDefault text={`${t("BasedIn")}:`}/>
                 </div>
                 <div className={styles.about_me_info_row_key}>
                   <TextDefault text="Luziânia, Goiás, Brasil"/>
@@ -73,7 +73,7 @@ function AboutMe () {
             </div>
 
             <div className={styles.about_me_info_download}>
-              <TextDefault text="Download my CV"/>
+              <TextDefault text={`${t("DownloadCV")}`}/>
               <IconDefault icon="ic:round-download" />
             </div>
           </div>

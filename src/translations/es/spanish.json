@@ -7,6 +7,11 @@
     "Portfolio": "Portafolio",
     "Contact": "Contacto",
 
+    "Name": "Nombre",
+    "Email": "E-mail",
+    "BasedIn": "Viviendo en",
+    "DownloadCV": "Descargar mi currículum",
+
     "English": "English",
     "Estonian": "Eesti keel",
     "Portuguese": "Português",
@@ -24,7 +29,16 @@
     "CloudArchitectureDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
     "DatabaseManagementDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
     "ScalableMicroservicesDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam"
+    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+
+    "Experience": "Experiencia",
+    "Education": "Formación",
+    "Technologies": "Tecnologías",
+
+    "ClickToSee": "Haga clic para más detalles"
+
+
+
 
 
   }
