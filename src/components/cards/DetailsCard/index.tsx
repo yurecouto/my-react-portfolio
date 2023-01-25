@@ -1,11 +1,9 @@
 import { Icon } from "@iconify/react";
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Project from "../../../interfaces/project";
 import { selectTheme } from "../../../providers/slices/theme.slice";
 import { TextPortfolio } from "../../texts/TextPortfolio";
-import { TitleDefault } from "../../texts/TitleDefault";
-import { TitlePortfolio } from "../../texts/TitlePortfolio";
 import { TitleSecondary } from "../../texts/TitleSecondary";
 import SkillCard from "../SkillCard";
 
@@ -16,18 +14,42 @@ interface Props {
   onClick?: (param: any) => void;
 }
 
-function DetailsCard({ project }: Props) {
+function DetailsCard({ project, onClick }: Props) {
   const theme = useSelector(selectTheme);
+  const [hover, setHover] = useState<boolean>();
+
+  const handleMouseIn = () => {
+    setHover(true);
+  };
+
+  const handleMouseOut = () => {
+    setHover(false);
+  };
 
   return (
     <div className={styles.details_card_container}>
-      <div className={styles.details_card_header}>
+      <div
+        className={styles.details_card_header}
+        style={{backgroundColor: theme.COLORS.CARD_BACKGROUND}}
+      >
         <TitleSecondary text={project.title}/>
 
-        <Icon icon="ph:x-bold"/>
+        <Icon
+          onMouseOver={handleMouseIn}
+          onMouseOut={handleMouseOut}
+          icon="ph:x-bold"
+          style={{color: hover
+            ? theme.COLORS.TEXT_HIGHLIGHT
+            : theme.COLORS.TEXT_DEFAULT
+          }}
+          onClick={onClick}
+        />
       </div>
 
-      <div className={styles.details_card_subcontainer}>
+      <div
+        className={styles.details_card_subcontainer}
+        style={{backgroundColor: theme.COLORS.CARD_BACKGROUND}}
+      >
         <img
           className={styles.details_card_image}
           src={project.image} alt=""
@@ -35,7 +57,6 @@ function DetailsCard({ project }: Props) {
 
         <div className={styles.details_card_info}>
           <div className={styles.details_card_info_description}>
-            <TitlePortfolio textAlign="left" text="Description" />
             <TextPortfolio textAlign="left" text={project.description}/>
           </div>
 
@@ -44,8 +65,6 @@ function DetailsCard({ project }: Props) {
               <SkillCard skill={skill}/>
             ))}
           </div>
-
-
         </div>
       </div>
     </div>

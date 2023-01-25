@@ -1,5 +1,4 @@
 .details_card_container {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -8,47 +7,49 @@
 }
 
 .details_card_header {
-  border: 1px solid blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   width: 90%;
   padding: 16px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 .details_card_subcontainer {
-  border: 1px solid blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
   width: 90%;
   padding: 16px;
+  border-end-end-radius: 16px;
+  border-end-start-radius: 16px;
 }
 
 .details_card_image {
-  max-width: 600px;
+  height: 320px;
   border-radius: 16px;
 }
 
 .details_card_info {
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid blueviolet;
+  padding-left: 32px;
 }
 
 .details_card_info_description {
-  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .details_card_info_skills {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
