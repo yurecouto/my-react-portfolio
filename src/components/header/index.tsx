@@ -69,7 +69,10 @@ function Header() {
         </div>
       </header>
     ) : (
-      <header className={styles.header}>
+      <header
+        className={styles.header}
+        style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND }}
+      >
         <div>
           <TitleDefault text={"Yure Couto"}/>
         </div>
@@ -87,7 +90,9 @@ function Header() {
               onMouseOut={handleMouseOutIcon}
               onClick={handleDropDown}
               style={{
-                color: hoverIcon ? "red" : "whitesmoke"
+                color: hoverIcon
+                ? theme.COLORS.TEXT_HIGHLIGHT
+                : theme.COLORS.TEXT_DEFAULT
               }}
               icon={ !isOpen ? "material-symbols:menu-rounded" : "ph:x-bold"}
             />
@@ -96,10 +101,15 @@ function Header() {
               <div className={styles.header_menu}>
                 <ul className={styles.header_menu_ul}>
                   <TextList text={`${t("Home")}`} handleSomething={() => handleScroll("section-home")}/>
+                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("AboutMe")}`} handleSomething={() => handleScroll("section-about-me")}/>
+                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("WhatIDo")}`} handleSomething={() => handleScroll("section-what-i-do")}/>
+                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("Curriculum")}`} handleSomething={() => handleScroll("section-curriculum")}/>
+                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("Portfolio")}`} handleSomething={() => handleScroll("section-portfolio")}/>
+                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("Contact")}`} handleSomething={() => handleScroll("section-contact")}/>
                 </ul>
               </div>

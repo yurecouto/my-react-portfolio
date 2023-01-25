@@ -77,6 +77,13 @@
     margin-top: 10px;
     margin-left: -200px;
     background-color: #191919;
+    border-radius: 8px;
+  }
+
+  .header_menu_line {
+    width: 224px;
+    margin-left: 8px;
+    border-bottom: 1px solid whitesmoke;
   }
 }
 

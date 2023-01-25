@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import DetailsCard from "../../components/cards/DetailsCard";
 import PortfolioCard from "../../components/cards/PortfolioCard";
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
+import Project from "../../interfaces/project";
 import { selectTheme } from "../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
@@ -13,6 +15,22 @@ function Portfolio () {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
+
+  const [openDetails, setOpenDetails] = useState<boolean>();
+
+  const projects: Project[] = [
+    {
+      image: "https://rafaelcruz.azurewebsites.net/wp-content/uploads/2020/02/apis-logo.jpg",
+      title: "Node API Rest",
+      description: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+      skills: ["Node", "TypeScript", "Express", "JWT", "MongoDB"]
+    },
+  ];
+
+  const handleOpenDetails = async () => {
+    setOpenDetails(true)
+  };
 
   return (
     <>
@@ -31,29 +49,34 @@ function Portfolio () {
         </div>
 
         <div className={styles.portfolio_sub_container}>
-          <div className={styles.portfolio_menu}>
-            <div className={styles.portfolio_menu_items}>
-              <TextDefault text="Back-End"/>
-              <TextDefault text="Front-End"/>
-              <TextDefault text="Mobile"/>
-            </div>
-          </div>
-
-          <div className={styles.portfolio_card_container}>
-            <PortfolioCard
-              img="https://rafaelcruz.azurewebsites.net/wp-content/uploads/2020/02/apis-logo.jpg"
-              title="Node API Rest"
-              description="Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
-              skills={["Node", "TypeScript", "Express", "JWT", "MongoDB"]}
+          {openDetails
+          ? (
+            <DetailsCard
+              project={projects[0]}
             />
+          )
+          : (
+            <>
+              <div className={styles.portfolio_menu}>
+                <div className={styles.portfolio_menu_items}>
+                  <TextDefault text="All"/>
+                  <TextDefault text="Back-End"/>
+                  <TextDefault text="Front-End"/>
+                  <TextDefault text="Mobile"/>
+                </div>
+              </div>
 
-            <PortfolioCard
-              img="https://miro.medium.com/max/1400/1*jWZIbgnF4UCFnMXC2pZXRg.png"
-              title="Client React"
-              description="Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure."
-              skills={["React", "TypeScript", "Axios", "Token/Refresh Token", "Chart.js", "Flexbox"]}
-            />
-          </div>
+              <div className={styles.portfolio_card_container}>
+                {projects.map(project => (
+                  <PortfolioCard
+                    project={project}
+                    onClick={handleOpenDetails}
+                  />
+                ))}
+              </div>
+            </>
+          )}
+
         </div>
       </div>
     </>

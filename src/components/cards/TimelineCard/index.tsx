@@ -1,5 +1,4 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { TextCurriculum } from "../../texts/TextCurriculum";
 import { TextCurriculumSecondary } from "../../texts/TextCurriculumSecondary";
 import { TitleCurriculum } from "../../texts/TitleCurriculum";
