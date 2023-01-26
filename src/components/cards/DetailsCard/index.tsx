@@ -30,7 +30,10 @@ function DetailsCard({ project, onClick }: Props) {
     <div className={styles.details_card_container}>
       <div
         className={styles.details_card_header}
-        style={{backgroundColor: theme.COLORS.CARD_BACKGROUND}}
+        style={{
+          backgroundColor: theme.COLORS.CARD_BACKGROUND,
+          borderColor: theme.COLORS.PAGE_SEPARATOR
+        }}
       >
         <TitleSecondary text={project.title}/>
 

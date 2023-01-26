@@ -37,7 +37,10 @@ function AboutMe () {
             <TextDefault text="I help you build brand for your business at an affordable price. Thousands of clients have procured exceptional results while working with our dedicated team. when an unknown printer took a galley of type and scrambled it to make a type specimen book. Delivering work within time and budget which meets client’s requirements is our moto. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley."/>
           </div>
 
-          <div className={styles.about_me_main_line}/>
+          <div
+            className={styles.about_me_main_line}
+            style={{ borderColor: theme.COLORS.PAGE_SEPARATOR }}
+          />
 
           <div className={styles.about_me_sub_container_info}>
             <div className={styles.about_me_info_row_container}>
@@ -49,7 +52,11 @@ function AboutMe () {
                   <TextDefault text="Yure Barbosa Couto"/>
                 </div>
               </div>
-              <div className={styles.about_me_info_row_line}/>
+
+              <div
+                className={styles.about_me_info_row_line}
+                style={{ borderColor: theme.COLORS.PAGE_SEPARATOR }}
+              />
 
               <div className={styles.about_me_info_row}>
                 <div className={styles.about_me_info_row_key}>
@@ -59,7 +66,11 @@ function AboutMe () {
                   <TextDefault text="yure.couto@outlook.com"/>
                 </div>
               </div>
-              <div className={styles.about_me_info_row_line}/>
+
+              <div
+                className={styles.about_me_info_row_line}
+                style={{ borderColor: theme.COLORS.PAGE_SEPARATOR }}
+              />
 
               <div className={styles.about_me_info_row}>
                 <div className={styles.about_me_info_row_key}>
@@ -69,10 +80,17 @@ function AboutMe () {
                   <TextDefault text="Luziânia, Goiás, Brasil"/>
                 </div>
               </div>
-              <div className={styles.about_me_info_row_line}/>
+
+              <div
+                className={styles.about_me_info_row_line}
+                style={{ borderColor: theme.COLORS.PAGE_SEPARATOR }}
+              />
             </div>
 
-            <div className={styles.about_me_info_download}>
+            <div
+              className={styles.about_me_info_download}
+              style={{ backgroundColor: theme.COLORS.TEXT_HIGHLIGHT}}
+            >
               <TextDefault text={`${t("DownloadCV")}`}/>
               <IconDefault icon="ic:round-download" />
             </div>

@@ -1,5 +1,7 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import Timeline from "../../../interfaces/Timeline";
+import { selectTheme } from "../../../providers/slices/theme.slice";
 import { TextCurriculum } from "../../texts/TextCurriculum";
 import { TextCurriculumSecondary } from "../../texts/TextCurriculumSecondary";
 import { TitleCurriculum } from "../../texts/TitleCurriculum";
@@ -13,7 +15,7 @@ interface Props {
 function TimelineCard({
   timeline
   }: Props) {
-  // const { t } = useTranslation();
+  const theme = useSelector(selectTheme);
 
   return (
     <div className={styles.timeline_card}>
@@ -31,11 +33,23 @@ function TimelineCard({
 
         <div className={styles.timeline_card_column}>
           <div className={styles.timeline_card_line_container}>
-            <div className={styles.timeline_card_line_top}/>
-            <div className={styles.timeline_card_indicator}>
-              <div className={styles.timeline_card_indicator_core}/>
+            <div
+              className={styles.timeline_card_line_top}
+              style={{backgroundColor: theme.COLORS.TEXT_DEFAULT}}
+            />
+            <div
+              className={styles.timeline_card_indicator}
+              style={{backgroundColor: theme.COLORS.TEXT_HIGHLIGHT}}
+            >
+              <div
+                className={styles.timeline_card_indicator_core}
+                style={{backgroundColor: theme.COLORS.TEXT_DEFAULT}}
+              />
             </div>
-            <div className={styles.timeline_card_line_bottom}/>
+            <div
+              className={styles.timeline_card_line_bottom}
+              style={{backgroundColor: theme.COLORS.TEXT_DEFAULT}}
+            />
           </div>
         </div>
 

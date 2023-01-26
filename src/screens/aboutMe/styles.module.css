@@ -39,6 +39,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 32px;
 }
 
 .about_me_info_row_container {
@@ -55,14 +56,14 @@
 .about_me_info_row_line {
   margin-top: 8px;
   margin-bottom: 8px;
-  border-bottom: 1px solid #676767;
+  border-bottom: 1px solid;
 }
 
 .about_me_main_line {
   margin-top: 8px;
   margin-bottom: 8px;
   height: 80%;
-  border-left: 1px solid #676767;
+  border-left: 1px solid;
 }
 
 .about_me_info_download {
@@ -73,7 +74,6 @@
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  background-color: blueviolet;
   padding: 0 0 0 8px;
   transition: 0.2s;
 }

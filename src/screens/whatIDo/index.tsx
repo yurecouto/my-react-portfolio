@@ -8,6 +8,8 @@ import { selectTheme } from "../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
+import developer from "../../static/teste.png"
+
 function WhatIDo () {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
@@ -22,6 +24,11 @@ function WhatIDo () {
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           minHeight: height,
           height: "auto",
+          backgroundImage: `url(${developer})`,
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
           borderBottom: `1px solid ${theme.COLORS.PAGE_SEPARATOR}`
         }}
       >

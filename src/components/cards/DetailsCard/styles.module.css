@@ -7,6 +7,7 @@
 }
 
 .details_card_header {
+  border-bottom: 1px solid;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

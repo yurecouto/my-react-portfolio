@@ -61,33 +61,27 @@
 
 .timeline_card_line_top {
   width: 2px;
-  border-radius: 2px;
   height: 16%;
-  background-color: white;
 }
 
 .timeline_card_line_bottom {
   width: 2px;
-  border-radius: 2px;
   height: 84%;
-  background-color: white;
 }
 
 .timeline_card_indicator {
-  height: 16px;
-  width: 16px;
+  height: 12px;
+  width: 12px;
   border-radius: 100%;
-  background-color: blueviolet;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .timeline_card_indicator_core {
-  height: 8px;
-  width: 8px;
+  height: 6px;
+  width: 6px;
   border-radius: 100%;
-  background-color: white;
 }
 
 @media screen and (max-width: 1760px) {}

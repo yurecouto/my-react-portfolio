@@ -14,6 +14,8 @@ import Project from "../../interfaces/Project";
 
 import styles from "./styles.module.css";
 
+import teste from "../../static/teste.jpg"
+
 function Portfolio () {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
@@ -57,6 +59,11 @@ function Portfolio () {
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           minHeight: height,
           height: "auto",
+          backgroundImage: `url(${teste})`,
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
           borderBottom: `1px solid ${theme.COLORS.PAGE_SEPARATOR}`
         }}
       >

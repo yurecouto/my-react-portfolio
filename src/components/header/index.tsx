@@ -48,7 +48,12 @@ function Header() {
         className={styles.header}
       >
         <div className={styles.header_profile_pic_container} >
-          <img className={styles.header_profile_pic} src={avatar} alt=""/>
+          <img
+            className={styles.header_profile_pic}
+            style={{ borderColor: theme.COLORS.TEXT_HIGHLIGHT }}
+            src={avatar}
+            alt=""
+          />
           <TitleDefault text={"Yure Couto"}/>
         </div>
 
@@ -98,18 +103,21 @@ function Header() {
             />
 
             {isOpen && (
-              <div className={styles.header_menu}>
+              <div
+                className={styles.header_menu}
+                style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND }}
+              >
                 <ul className={styles.header_menu_ul}>
                   <TextList text={`${t("Home")}`} handleSomething={() => handleScroll("section-home")}/>
-                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
+                  <div className={styles.header_menu_line} style={{ borderColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("AboutMe")}`} handleSomething={() => handleScroll("section-about-me")}/>
-                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
+                  <div className={styles.header_menu_line} style={{ borderColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("WhatIDo")}`} handleSomething={() => handleScroll("section-what-i-do")}/>
-                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
+                  <div className={styles.header_menu_line} style={{ borderColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("Curriculum")}`} handleSomething={() => handleScroll("section-curriculum")}/>
-                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
+                  <div className={styles.header_menu_line} style={{ borderColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("Portfolio")}`} handleSomething={() => handleScroll("section-portfolio")}/>
-                  <div className={styles.header_menu_line} style={{ borderBottomColor: theme.COLORS.PAGE_SEPARATOR}}/>
+                  <div className={styles.header_menu_line} style={{ borderColor: theme.COLORS.PAGE_SEPARATOR}}/>
                   <TextList text={`${t("Contact")}`} handleSomething={() => handleScroll("section-contact")}/>
                 </ul>
               </div>

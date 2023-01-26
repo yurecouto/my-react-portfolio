@@ -5,7 +5,7 @@ import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
 import { selectTheme } from "../../providers/slices/theme.slice";
 
-import keyboard from "../../static/keyboard.jpg"
+import keyboard from "../../static/keyboard_color.png"
 
 import styles from "./styles.module.css";
 
