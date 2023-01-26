@@ -14,7 +14,7 @@ import Project from "../../interfaces/Project";
 
 import styles from "./styles.module.css";
 
-import teste from "../../static/teste.jpg"
+import dash from "../../static/simple_dashed.png"
 
 function Portfolio () {
   const { t } = useTranslation();
@@ -59,11 +59,10 @@ function Portfolio () {
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           minHeight: height,
           height: "auto",
-          backgroundImage: `url(${teste})`,
+          backgroundImage: `url(${dash})`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          backgroundRepeat: "repeat",
           borderBottom: `1px solid ${theme.COLORS.PAGE_SEPARATOR}`
         }}
       >
