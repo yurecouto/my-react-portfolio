@@ -12,7 +12,7 @@ interface Props {
   name?: string;
   color?: string;
   link?: string;
-  email?: string;
+  text?: string;
 }
 
 function ContactCard({
@@ -20,7 +20,7 @@ function ContactCard({
   name = "",
   color = "",
   link = "",
-  email = ""
+  text = ""
   }: Props) {
   const { t } = useTranslation();
   const theme = useSelector(selectTheme);
@@ -55,7 +55,7 @@ function ContactCard({
   };
 
   return (
-    link !== "" && email === "" ? (
+    link !== "" && text === "" ? (
       <a
         href={link}
         rel="noreferrer"
@@ -87,7 +87,7 @@ function ContactCard({
         onMouseOut={handleMouseOut}
         className={styles.contact_sub_container_row}
         style={{backgroundColor: theme.COLORS.CARD_BACKGROUND}}
-        onClick={() => copyToClipboard(email)}
+        onClick={() => copyToClipboard(text)}
       >
         <div className={styles.contact_sub_container_icon}>
           <Icon
@@ -100,7 +100,7 @@ function ContactCard({
         <div className={styles.contact_sub_container_title}>
           <SubTitleCurriculum hover={hover} text={
             click
-              ? `${t("EmailCopiedtoClipboard")}!`
+              ? `${t("CopiedtoClipboard")}!`
               : name
           }/>
         </div>

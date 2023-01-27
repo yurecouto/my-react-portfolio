@@ -18,7 +18,7 @@ const dark = {
     GMAIL: "#E54033",
     OUTLOOK: "#0F6CBD",
     WHATSAPP: "#25D366",
-
+    TELEGRAM: "#0088cc"
   },
 };
 

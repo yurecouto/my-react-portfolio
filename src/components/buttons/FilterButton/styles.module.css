@@ -1,0 +1,11 @@
+.portfolio_menu_option {
+  border-radius: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.portfolio_menu_option:hover {
+  transform: scale(1.06);
+}

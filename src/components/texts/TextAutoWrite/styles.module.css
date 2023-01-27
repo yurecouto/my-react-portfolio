@@ -1,6 +1,6 @@
 .typing_text {
   font: bold 200% Consolas, Monaco, monospace;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 100;
   text-decoration: underline;
   border-right: 0.1em solid;
@@ -8,6 +8,7 @@
   overflow: hidden;
   animation: typing 2.5s steps(31, end),
   cursor-blink 0.3s step-end infinite alternate;
+  position: relative;
 }
 
 @keyframes typing {
@@ -27,39 +28,39 @@
 @media screen and (max-width: 1600px) {}
 @media screen and (max-width: 1440px) {
   .typing_text {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 1280px) {
   .typing_text {
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 @media screen and (max-width: 1120px) {
   .typing_text {
-    font-size: 32px;
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 960px) {
   .typing_text {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 @media screen and (max-width: 864px) {}
 @media screen and (max-width: 768px) {
   .typing_text {
-    font-size: 24px;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 704px) {}
 @media screen and (max-width: 640px) {
   .typing_text {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 560px) {
   .typing_text {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 @media screen and (max-width: 480px) {}
