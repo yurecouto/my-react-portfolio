@@ -35,7 +35,10 @@
     "Education": "Formação",
     "Technologies": "Tecnologias",
 
-    "ClickToSee": "Clique para mais detalhes"
+    "ClickToSee": "Clique para mais detalhes",
+
+    "EmailCopiedtoClipboard": "E-mail Copiado"
+
 
   }
 }

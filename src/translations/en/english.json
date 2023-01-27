@@ -17,7 +17,6 @@
     "BasedIn": "Based in",
     "DownloadCV": "Download my CV",
 
-
     "APIRestDevelopment": "API Rest Development",
     "FrontEndDevelopment": "Front-End Development",
     "CloudArchitecture": "Cloud Architecture",
@@ -36,8 +35,9 @@
     "Education": "Education",
     "Technologies": "Technologies",
 
-    "ClickToSee": "Click for more details"
+    "ClickToSee": "Click for more details",
 
+    "EmailCopiedtoClipboard": "E-mail Copied"
 
   }
 }

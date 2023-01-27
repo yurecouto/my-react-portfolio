@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import i18n from "../../../translations/i18n";
 
@@ -29,7 +29,16 @@ function ChangeLanguage() {
 
   const [actualLang, setActualLang] = useState<Language>(parsedLang);
   const [isOpen, setIsOpen] = useState<boolean>();
+  const [isHover, setIsHover] = useState<boolean>();
   const [hover, setHover] = useState<boolean>();
+
+  const handleMouseInContainer = () => {
+    setIsHover(true);
+  };
+
+  const handleMouseOutContainer = () => {
+    setIsHover(false);
+  };
 
   const handleMouseIn = () => {
     setHover(true);
@@ -39,6 +48,17 @@ function ChangeLanguage() {
     setHover(false);
   };
 
+  const handleOpenContainer = () => {
+    setIsOpen(!isOpen)
+  }
+
+  useEffect(() => {
+    if (isOpen && !isHover) {
+      setTimeout(() => {
+        setIsOpen(false)
+      }, 500)
+    }
+  }, [isOpen, isHover])
 
   async function handleChangeLang(lang: Language) {
     switch (lang.code) {
@@ -68,71 +88,76 @@ function ChangeLanguage() {
     }
   }
 
+
   return (
     width > 960 ? (
-      <div onClick={() => setIsOpen(!isOpen)} className={styles.change_lang_container}>
-      {isOpen ? (
-        <div
-          className={styles.change_lang_options_container}
-        >
-          <div
-            className={styles.change_lang_option}
-            style={{
-              borderTopLeftRadius: 8,
-              borderTopRightRadius: 8,
-              backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER
-            }}
-            onClick={() => handleChangeLang({code: "pt_BR", icon: "openmoji:flag-brazil", name: "Portuguese"})}
-          >
-            <p className={styles.change_lang_option_text}>{t("Portuguese")}</p>
-            <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-brazil"/>
-          </div>
-          <div
-            className={styles.change_lang_option}
-            style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER }}
-            onClick={() => handleChangeLang({code: "et", icon: "openmoji:flag-estonia", name: "Estonian"})}
-          >
-            <p className={styles.change_lang_option_text}>{t("Estonian")}</p>
-            <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-estonia"/>
-          </div>
-          <div
-            className={styles.change_lang_option}
-            style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER }}
-            onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-united-kingdom", name: "English"})}
-          >
-            <p className={styles.change_lang_option_text}>{t("English")}</p>
-            <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-united-kingdom"/>
-          </div>
-          <div
-            className={styles.change_lang_option}
-            style={{
-              border: 0,
-              borderEndEndRadius: 8,
-              borderEndStartRadius: 8,
-              backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER
-            }}
-            onClick={() => handleChangeLang({code: "es_ES", icon: "openmoji:flag-spain", name: "Spanish"})}
-          >
-            <p className={styles.change_lang_option_text}>{t("Spanish")}</p>
-            <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-spain"/>
-          </div>
-
-        </div>
-      ) : (
-        <></>
-      )}
       <div
-        onMouseOver={handleMouseIn}
-        onMouseOut={handleMouseOut}
-        className={styles.change_lang_selected}
-        style={{ backgroundColor: hover
-          ? theme.COLORS.HEADER_BACKGROUND_HOVER
-          : theme.COLORS.HEADER_BACKGROUND
-        }}
+        onMouseOver={handleMouseInContainer}
+        onClick={handleOpenContainer} className={styles.change_lang_container}
       >
-        <p className={styles.change_lang_option_text}>{t(actualLang.name)}</p>
-        <Icon className={styles.change_lang_option_icon} icon={actualLang.icon}/>
-      </div>
+        {isOpen ? (
+          <div
+            onMouseOut={handleMouseOutContainer}
+            className={styles.change_lang_options_container}
+          >
+            <div
+              className={styles.change_lang_option}
+              style={{
+                borderTopLeftRadius: 8,
+                borderTopRightRadius: 8,
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER
+              }}
+              onClick={() => handleChangeLang({code: "pt_BR", icon: "openmoji:flag-brazil", name: "Portuguese"})}
+            >
+              <p className={styles.change_lang_option_text}>{t("Portuguese")}</p>
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-brazil"/>
+            </div>
+            <div
+              className={styles.change_lang_option}
+              style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER }}
+              onClick={() => handleChangeLang({code: "et", icon: "openmoji:flag-estonia", name: "Estonian"})}
+            >
+              <p className={styles.change_lang_option_text}>{t("Estonian")}</p>
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-estonia"/>
+            </div>
+            <div
+              className={styles.change_lang_option}
+              style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER }}
+              onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-united-kingdom", name: "English"})}
+            >
+              <p className={styles.change_lang_option_text}>{t("English")}</p>
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-united-kingdom"/>
+            </div>
+            <div
+              className={styles.change_lang_option}
+              style={{
+                border: 0,
+                borderEndEndRadius: 8,
+                borderEndStartRadius: 8,
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER
+              }}
+              onClick={() => handleChangeLang({code: "es_ES", icon: "openmoji:flag-spain", name: "Spanish"})}
+            >
+              <p className={styles.change_lang_option_text}>{t("Spanish")}</p>
+              <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-spain"/>
+            </div>
+
+          </div>
+        ) : (
+          <></>
+        )}
+        <div
+          onMouseOver={handleMouseIn}
+          onMouseOut={handleMouseOut}
+          className={styles.change_lang_selected}
+          style={{ backgroundColor: hover
+            ? theme.COLORS.HEADER_BACKGROUND_HOVER
+            : theme.COLORS.HEADER_BACKGROUND
+          }}
+        >
+          <p className={styles.change_lang_option_text}>{t(actualLang.name)}</p>
+          <Icon className={styles.change_lang_option_icon} icon={actualLang.icon}/>
+        </div>
 
       </div>
     ) : (

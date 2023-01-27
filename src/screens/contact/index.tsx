@@ -45,12 +45,13 @@ function Contact () {
             color={theme.COLORS.GMAIL}
             name="Gmail"
             icon="mdi:gmail"
-            link="yurecouto.dev@gmail.com"
+            email="yurecouto.dev@gmail.com"
           />
           <ContactCard
             color={theme.COLORS.OUTLOOK}
             name="Outlook"
             icon="file-icons:microsoft-outlook"
+            email="yure.couto@outlook.com"
           />
           <ContactCard
             color={theme.COLORS.WHATSAPP}
