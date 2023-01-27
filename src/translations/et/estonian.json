@@ -7,6 +7,12 @@
     "Portfolio": "Portfell",
     "Contact": "Kontakti",
 
+    "HelloWorld": "Tere, Maailm",
+    "IAmAFullstack": "Olen Full Stack veebiarendaja",
+
+    "HiMyNameIs": "Tere, minu nimi on",
+    "AboutMeText": "Ma olen innukas luues innovaatilisi veebi- ja mobiilirakendusi, mille kasutajaliides on lihtne ja intuitiivne. Minu oskused on suunatud kaasaegsetele ja skaleeritavatele tehnoloogiatele ja ma olen alati valmis uuteks väljakutseteks, et parandada oma oskusi. Minu lõppeesmärk on pakkuda parimat kasutajakogemust minu töö kaudu. Minu kogemuse ja pühendumisega usun kindlalt, et ma suudan teie ideed ellu viia.",
+
     "Name": "Nimi",
     "Email": "E-mail",
     "BasedIn": "Sisse elades",
@@ -24,12 +30,12 @@
     "ScalableMicroservices": "Skaleeritavad Mikroteenused",
     "SecureApplications": "Turvalised Rakendused",
 
-    "APIRestDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "FrontEndDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "CloudArchitectureDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "DatabaseManagementDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "ScalableMicroservicesDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "APIRestDevelopmentDescription": "Ehitan tagarakenduse süsteeme RESTfuli arhitektuuri järgi, kohandades need teie projekti vajadustele, luues seeläbi tõhusaid, mitmekülgseid, turvalisi ja skaleeritavaid mikroteenuseid.",
+    "FrontEndDevelopmentDescription": "Ma teen teie projektid reaalsuseks nagu veebisaidid või mitmeplatvormilised rakendused (Android ja IOS) koos kasutajaliidesega, mis on nii intuitiivne kui ilus ja sobiv kõikidele ekraanidele.",
+    "CloudArchitectureDescription": "Adapteerin süsteeme töötama pilveserverites nagu Amazon Web Services ja Azure, millel on kõrge saadavalolek, elastsus ja skaleeritavus.",
+    "DatabaseManagementDescription": "Ma salvestan teie ja teie klientide andmed andmebaasides, olenemata sellest, kas need on seotud või mitte, muutes andmed teie rakendustele turvaliselt ligipääsetavaks.",
+    "ScalableMicroservicesDescription": "Ma muudan suured süsteemid väikesteks sõltumatuteks plokkideks, need plokid on mikroteenused, igaühel oma spetsiifiline funktsionaalsus, tagades kiire ja tõhusa skaleeritavuse.",
+    "SecureApplicationsDescription": "Ehitan teie süsteemi turvalisuse meetoditega, mis tagavad nii rakenduse sisselogimiste turvalisuse kui ka dinamilisuse ning tundlikud andmed on krüpteeritud andmebaasis.",
 
     "Experience": "Kogemusi",
     "Education": "Koolitus",

@@ -33,8 +33,8 @@ function AboutMe () {
 
         <div className={styles.about_me_sub_container}>
           <div className={styles.about_me_sub_container_text}>
-            <TitleDefault text="Hi, my name is Yure."/>
-            <TextDefault text="I help you build brand for your business at an affordable price. Thousands of clients have procured exceptional results while working with our dedicated team. when an unknown printer took a galley of type and scrambled it to make a type specimen book. Delivering work within time and budget which meets client’s requirements is our moto. Lorem Ipsum has been the industry's standard dummy text ever when an unknown printer took a galley."/>
+            <TitleDefault text={`${t("HiMyNameIs")} Yure.`}/>
+            <TextDefault text={`${t("AboutMeText")}`}/>
           </div>
 
           <div

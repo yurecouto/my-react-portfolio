@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { TextAutoWrite } from "../../components/texts/TextAutoWrite";
 import { TitlePage } from "../../components/texts/TitlePage";
@@ -10,6 +11,7 @@ import keyboard from "../../static/keyboard_color.png"
 import styles from "./styles.module.css";
 
 function Home () {
+  const { t } = useTranslation();
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
 
@@ -30,9 +32,9 @@ function Home () {
         }}
       >
         <div className={styles.cover_letter_sub_container}>
-          <TitlePage text="Hello World!"/>
+          <TitlePage text={`${t("HelloWorld")}!`}/>
 
-          <TextAutoWrite text="I'm a Full Stack Web Developer."/>
+          <TextAutoWrite text={`${t("IAmAFullstack")}.`}/>
         </div>
       </div>
     </>

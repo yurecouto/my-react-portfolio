@@ -7,6 +7,12 @@
     "Portfolio": "Portfolio",
     "Contact": "Contact",
 
+    "HelloWorld": "Hello, World",
+    "IAmAFullstack": "I'm a Full Stack Web Developer",
+
+    "HiMyNameIs": "Hi, my name is",
+    "AboutMeText": "I am passionate about creating innovative web and mobile applications with a simple and intuitive user interface. My skills are focused on modern and scalable technologies and I am always eager for new challenges to improve my skills. My ultimate goal is to offer the best possible user experience through my work. With my experience and dedication, I am confident in my ability to bring your ideas to life.",
+
     "English": "English",
     "Estonian": "Eesti keel",
     "Portuguese": "Português",
@@ -24,12 +30,12 @@
     "ScalableMicroservices": "Scalable Microservices",
     "SecureApplications": "Secure Applications",
 
-    "APIRestDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "FrontEndDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "CloudArchitectureDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "DatabaseManagementDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "ScalableMicroservicesDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "APIRestDevelopmentDescription": "I build back-end systems according to the RESTful architecture tailored to your project, creating efficient, versatile, secure, and scalable microservice applications.",
+    "FrontEndDevelopmentDescription": "I make your projects come to life as websites or cross-platform apps (Android and IOS) with a user interface that is as intuitive as it is beautiful and adaptable to all screens.",
+    "CloudArchitectureDescription": "I adapt systems to work on cloud servers such as Amazon Web Services and Azure, having high availability, elasticity, and improving scalability.",
+    "DatabaseManagementDescription": "I store your and your customers' information in databases, whether relational or non-relational, making the data accessible to your applications in a secure way.",
+    "ScalableMicroservicesDescription": "I adapt large systems into small independent blocks, these blocks are microservices, each with its specific functionality, ensuring quick and effective scalability.",
+    "SecureApplicationsDescription": "I build your system with security methods that ensure that both the application logins are secure and dynamic, and sensitive data encrypted in the database.",
 
     "Experience": "Experience",
     "Education": "Education",

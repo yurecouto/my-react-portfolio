@@ -7,6 +7,12 @@
     "Portfolio": "Portafolio",
     "Contact": "Contacto",
 
+    "HelloWorld": "Hola, Mundo",
+    "IAmAFullstack": "Soy un Desarrollador Web Full Stack",
+
+    "HiMyNameIs": "Hola, mi nombre es",
+    "AboutMeText": "Soy apasionado por crear aplicaciones web y móviles innovadoras con una interfaz de usuario sencilla e intuitiva. Mis habilidades están enfocadas en tecnologías modernas y escalables, siempre estoy ansioso por nuevos desafíos para mejorar mis habilidades. Mi objetivo final es ofrecer la mejor experiencia de usuario posible a través de mi trabajo. Con mi experiencia y dedicación, estoy seguro de mi capacidad para dar vida a tus ideas.",
+
     "Name": "Nombre",
     "Email": "E-mail",
     "BasedIn": "Viviendo en",
@@ -24,12 +30,12 @@
     "ScalableMicroservices": "Microservicios Escalables",
     "SecureApplications": "Aplicaciones Seguras",
 
-    "APIRestDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "FrontEndDevelopmentDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "CloudArchitectureDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "DatabaseManagementDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "ScalableMicroservicesDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
-    "SecureApplicationsDescription": "suspendisse ultrices gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam",
+    "APIRestDevelopmentDescription": "Construyo sistemas de back-end según la arquitectura RESTful adaptados a tu proyecto, creando así aplicaciones de microservicios eficientes, versátiles, seguras y escalables.",
+    "FrontEndDevelopmentDescription": "Hago que sus proyectos tomen forma como sitios web o aplicaciones multiplataforma (Android e IOS) con una interfaz de usuario tan intuitiva como bonita y adaptable a todas las pantallas.",
+    "CloudArchitectureDescription": "Adapto sistemas para trabajar en servidores en la nube como Amazon Web Services y Azure, con alta disponibilidad, elasticidad y mejorando la escalabilidad.",
+    "DatabaseManagementDescription": "Almaceno sus informaciones y las de sus clientes en bases de datos, ya sea relacionales o no relacionales, haciendo los datos accesibles a sus aplicaciones de forma segura.",
+    "ScalableMicroservicesDescription": "Adapto los sistemas grandes en pequeños bloques independientes, estos bloques son los microservicios, cada uno con su funcionalidad específica, garantizando una escalabilidad rápida y eficaz.",
+    "SecureApplicationsDescription": "Construyo su sistema con métodos de seguridad que aseguran tanto que los inicios de sesión de la aplicación sean seguros y dinámicos, y datos sensibles encriptados en la base de datos.",
 
     "Experience": "Experiencia",
     "Education": "Formación",

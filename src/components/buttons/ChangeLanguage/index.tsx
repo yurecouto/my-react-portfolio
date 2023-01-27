@@ -56,9 +56,9 @@ function ChangeLanguage() {
     if (isOpen && !isHover) {
       setTimeout(() => {
         setIsOpen(false)
-      }, 500)
+      }, width > 960 ? 500 : 2000)
     }
-  }, [isOpen, isHover])
+  }, [isOpen, isHover, width])
 
   async function handleChangeLang(lang: Language) {
     switch (lang.code) {
@@ -162,11 +162,12 @@ function ChangeLanguage() {
       </div>
     ) : (
       <div
-        onClick={() => setIsOpen(!isOpen)} className={styles.change_lang_container}
+        onMouseOver={handleMouseInContainer}
+        onClick={handleOpenContainer}
+        className={styles.change_lang_container}
       >
         <div
           className={styles.change_lang_selected}
-
           style={{ backgroundColor: hover
             ? theme.COLORS.HEADER_BACKGROUND_HOVER
             : theme.COLORS.HEADER_BACKGROUND
@@ -176,7 +177,10 @@ function ChangeLanguage() {
         </div>
 
         {isOpen ? (
-          <div className={styles.change_lang_options_container}>
+          <div
+          onMouseOut={handleMouseOutContainer}
+          className={styles.change_lang_options_container}
+          >
             <div
               className={styles.change_lang_option}
               style={{

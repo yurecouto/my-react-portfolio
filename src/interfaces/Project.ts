@@ -4,4 +4,5 @@ export default interface Project {
   description: string;
   image: string;
   skills: string[];
+  type: "backend" | "frontend" | "mobile"
 }

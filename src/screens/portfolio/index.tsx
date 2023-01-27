@@ -30,14 +30,16 @@ function Portfolio () {
       title: "Node API Rest",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      skills: ["Node", "TypeScript", "Express", "JWT", "MongoDB", "BCrypt", "SOLID"]
+      skills: ["Node", "TypeScript", "Express", "JWT", "MongoDB", "BCrypt", "SOLID"],
+      type: "backend"
     },
     {
       image: "https://rafaelcruz.azurewebsites.net/wp-content/uploads/2020/02/apis-logo.jpg",
       title: "TESTE TESTE TESTE",
       description: "t labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-      skills: ["Node", "TypeScript"]
+      skills: ["Node", "TypeScript"],
+      type: "backend"
     },
   ];
 
