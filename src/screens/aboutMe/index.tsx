@@ -2,12 +2,13 @@ import React from "react";
 import { useTranslation } from 'react-i18next';
 import { useSelector } from "react-redux";
 
+import { useWindowSize } from "../../hooks/window";
+import { selectTheme } from "../../providers/slices/theme.slice";
+
 import { IconDefault } from "../../components/texts/IconDefault";
 import { TextDefault } from "../../components/texts/TextDefault";
 import { TitleDefault } from "../../components/texts/TitleDefault";
 import { TitlePage } from "../../components/texts/TitlePage";
-import { useWindowSize } from "../../hooks/window";
-import { selectTheme } from "../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 

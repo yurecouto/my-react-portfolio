@@ -1,8 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+
 import Project from "../../../interfaces/Project";
+
+import { selectLanguage } from "../../../providers/slices/language.slice";
 import { selectTheme } from "../../../providers/slices/theme.slice";
+
 import { TextPortfolio } from "../../texts/TextPortfolio";
 import { TitlePortfolio } from "../../texts/TitlePortfolio";
 
@@ -16,6 +20,11 @@ interface Props {
 function PortfolioCard({ project, onClick }: Props) {
   const { t } = useTranslation();
   const theme = useSelector(selectTheme);
+  const language:
+  "pt_BR" |
+  "en_US" |
+  "es_ES" |
+  "et" = useSelector(selectLanguage);
 
   return (
     <div
@@ -42,11 +51,11 @@ function PortfolioCard({ project, onClick }: Props) {
 
       <div className={styles.portfolio_card_info}>
         <div className={styles.portfolio_card_name}>
-          <TitlePortfolio textAlign="left" text={project.title} />
+          <TitlePortfolio textAlign="left" text={project.title[language]} />
         </div>
 
         <div className={styles.portfolio_card_description}>
-          <TextPortfolio textAlign="left" text={project.subDescription}/>
+          <TextPortfolio textAlign="left" text={project.subDescription[language]}/>
         </div>
       </div>
     </div>

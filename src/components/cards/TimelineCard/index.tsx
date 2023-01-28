@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import Timeline from "../../../interfaces/Timeline";
+import { selectLanguage } from "../../../providers/slices/language.slice";
 import { selectTheme } from "../../../providers/slices/theme.slice";
 import { TextCurriculum } from "../../texts/TextCurriculum";
 import { TextCurriculumSecondary } from "../../texts/TextCurriculumSecondary";
@@ -16,6 +17,11 @@ function TimelineCard({
   timeline
   }: Props) {
   const theme = useSelector(selectTheme);
+  const language:
+  "pt_BR" |
+  "en_US" |
+  "es_ES" |
+  "et" = useSelector(selectLanguage);
 
   return (
     <div className={styles.timeline_card}>
@@ -55,10 +61,10 @@ function TimelineCard({
 
         <div className={styles.timeline_card_column}>
           <div className={styles.timeline_card_name}>
-            <TitleCurriculum textAlign="left" text={timeline.what} />
+            <TitleCurriculum textAlign="left" text={timeline.what[language]} />
           </div>
           <div className={styles.timeline_card_description}>
-            <TextCurriculum textAlign="left" text={timeline.description}/>
+            <TextCurriculum textAlign="left" text={timeline.description[language]}/>
           </div>
         </div>
 

@@ -9,7 +9,8 @@
   border-end-start-radius: 16px;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .portfolio_card_skills {

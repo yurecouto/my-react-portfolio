@@ -18,9 +18,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const storageLang = localStorage.getItem("LANGUAGE") || ""
-
-    if (!storageLang) {
+    if (!localStorage.getItem("LANGUAGE")) {
       const userLang = navigator.language;
 
       switch (userLang) {

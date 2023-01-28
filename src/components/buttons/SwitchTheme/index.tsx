@@ -10,8 +10,15 @@ import light from "../../../themes/light.theme";
 
 function SwitchTheme() {
   const dispatch = useDispatch();
-  // const theme = useSelector(selectTheme);
-  const localTheme = localStorage.getItem("THEME");
+
+  let localTheme: string;
+
+  if (localStorage.getItem("THEME")) {
+    localTheme = localStorage.getItem("THEME") || "";
+  } else {
+    localTheme = "dark"
+  }
+
   const [nightMode, setNightMode] = useState<boolean>(localTheme === "dark");
 
   const handleChangeTheme = async () => {

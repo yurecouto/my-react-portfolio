@@ -1,10 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import ContactCard from "../../components/cards/ContactCard";
-import { TitlePage } from "../../components/texts/TitlePage";
+
 import { useWindowSize } from "../../hooks/window";
 import { selectTheme } from "../../providers/slices/theme.slice";
+
+import ContactCard from "../../components/cards/ContactCard";
+import { TitlePage } from "../../components/texts/TitlePage";
 
 import styles from "./styles.module.css";
 

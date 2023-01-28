@@ -5,8 +5,9 @@ import i18n from "../../../translations/i18n";
 import styles from "./styles.module.css";
 import { useTranslation } from "react-i18next";
 import { useWindowSize } from "../../../hooks/window";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectTheme } from "../../../providers/slices/theme.slice";
+import { setLanguage } from "../../../providers/slices/language.slice";
 
 interface Language {
   code: string,
@@ -15,16 +16,22 @@ interface Language {
 }
 
 function ChangeLanguage() {
+  const dispatch = useDispatch();
   const { t } = useTranslation();
   const { width } = useWindowSize();
   const theme = useSelector(selectTheme);
 
-  const storageLang = localStorage.getItem("LANGUAGE") || ""
+  let parsedLang;
 
-  const parsedLang = JSON.parse(storageLang) || {
-    code: "pt_BR",
-    icon: "openmoji:flag-brazil",
-    name: "Portuguese"
+  if (localStorage.getItem("LANGUAGE")) {
+    const storageLang = localStorage.getItem("LANGUAGE") || ""
+    parsedLang = JSON.parse(storageLang)
+  } else {
+    parsedLang = {
+      code: "pt_BR",
+      icon: "openmoji:flag-brazil",
+      name: "Portuguese"
+    }
   }
 
   const [actualLang, setActualLang] = useState<Language>(parsedLang);
@@ -63,28 +70,32 @@ function ChangeLanguage() {
   async function handleChangeLang(lang: Language) {
     switch (lang.code) {
       case "pt_BR":
-        setActualLang(lang)
-        i18n.changeLanguage("pt_BR")
-        localStorage.setItem("LANGUAGE", JSON.stringify(lang))
+        setActualLang(lang);
+        i18n.changeLanguage("pt_BR");
+        localStorage.setItem("LANGUAGE", JSON.stringify(lang));
+        dispatch(setLanguage("pt_BR"));
         break
 
       case "en_US":
-        setActualLang(lang)
-        i18n.changeLanguage("en_US")
-        localStorage.setItem("LANGUAGE", JSON.stringify(lang))
-        break
+        setActualLang(lang);
+        i18n.changeLanguage("en_US");
+        localStorage.setItem("LANGUAGE", JSON.stringify(lang));
+        dispatch(setLanguage("en_US"));
+        break;
 
       case "es_ES":
-        setActualLang(lang)
-        i18n.changeLanguage("es_ES")
-        localStorage.setItem("LANGUAGE", JSON.stringify(lang))
+        setActualLang(lang);
+        i18n.changeLanguage("es_ES");
+        localStorage.setItem("LANGUAGE", JSON.stringify(lang));
+        dispatch(setLanguage("es_ES"));
         break
 
       case "et":
-        setActualLang(lang)
-        i18n.changeLanguage("et")
-        localStorage.setItem("LANGUAGE", JSON.stringify(lang))
-        break
+        setActualLang(lang);
+        i18n.changeLanguage("et");
+        localStorage.setItem("LANGUAGE", JSON.stringify(lang));
+        dispatch(setLanguage("et"));
+        break;
     }
   }
 

@@ -1,10 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
-import { TextAutoWrite } from "../../components/texts/TextAutoWrite";
-import { TitlePage } from "../../components/texts/TitlePage";
+
 import { useWindowSize } from "../../hooks/window";
 import { selectTheme } from "../../providers/slices/theme.slice";
+
+import { TextAutoWrite } from "../../components/texts/TextAutoWrite";
+import { TitlePage } from "../../components/texts/TitlePage";
 
 import homeDark from "../../static/homeDark.png"
 import homeLight from "../../static/homeLight.jpg"

@@ -1,11 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+
 import SkillCard from "../../components/cards/SkillCard";
 import TimelineCard from "../../components/cards/TimelineCard";
 import { SubTitleDefault } from "../../components/texts/SubTitleDefault";
 import { SubTitleSecondary } from "../../components/texts/SubTitleSecondary";
 import { TitlePage } from "../../components/texts/TitlePage";
+
 import { useWindowSize } from "../../hooks/window";
 import Timeline from "../../interfaces/Timeline";
 import { selectTheme } from "../../providers/slices/theme.slice";
@@ -19,18 +21,38 @@ function Curriculum () {
 
   const timelines: Timeline[] = [
     {
-      what: "Full Stack Developer",
+      what: {
+        pt_BR: "Titulo em portugues.",
+        en_US: "Titulo em ingles.",
+        es_ES: "Titulo em espanhol.",
+        et: "Titulo em estoniano.",
+      },
       where: "SPRO IT Solutions",
       when: "ago - 2022 / now",
-      description: "Integrando o time de Inovação da SPRO, atuando no Back-end, com API RESTs em Node com TypeScript, banco de dados MongoDB, e no Mobile em React Native construindo um aplicativo multiplataforma para consumir dados de sensores em campo e enviar informações e comandos para equipamentos, tudo utilizando padrões SOLID e clean code. "
+      description: {
+        pt_BR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        en_US: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        es_ES: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        et: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
     },
     {
-      what: "Análise e Desenvolvimento de Sistemas",
+      what: {
+        pt_BR: "Titulo em portugues.",
+        en_US: "Titulo em ingles.",
+        es_ES: "Titulo em espanhol.",
+        et: "Titulo em estoniano.",
+      },
       where: "UNIDESC - Centro Universitário de Desenvolvimento do Centro-Oeste",
       when: "jan - 2022 / now",
-      description: "Buscando avançar na jornada de conhecimento que iniciei com meus estudos autodidatas em programação, ingressei no curso de Análise e Desenvolvimento de Sistemas."
+      description: {
+        pt_BR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        en_US: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        es_ES: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        et: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      },
     },
-  ]
+  ];
 
   return (
     <>

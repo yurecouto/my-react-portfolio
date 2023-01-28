@@ -17,55 +17,30 @@ import styles from "./styles.module.css";
 import dashDark from "../../static/dashDark.png"
 import dashLight from "../../static/dashLight.png"
 
-
 const projects: Project[] = [
   {
     image: "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1127977/secure-rest-api-in-nodejs-18f43b3033c239da5d2525cfd9fdc98f.png",
-    title: "Node API Rest",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
+    title: {
+      en_US: "titulo em ingles",
+      es_ES: "titulo em espanhol",
+      pt_BR: "titulo em portugues",
+      et: "titulo em estoniano"
+    },
+    description: {
+      en_US: "descricao em ingles",
+      es_ES: "descricao em espanhol",
+      pt_BR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      et: "descricao em estoniano"
+    },
+    subDescription: {
+      en_US: "descricao em ingles",
+      es_ES: "descricao em espanhol",
+      pt_BR: "descricao em portugues",
+      et: "descricao em estoniano"
+    },
+    link: "https://wordcounter.net/character-count",
     skills: ["Node", "TypeScript", "Express", "JWT", "MongoDB", "BCrypt", "SOLID"],
     type: "backend"
-  },
-  {
-    image: "https://therichpost.com/wp-content/uploads/2022/02/Angular-14-Responsive-Admin-Dashboard-Template-Free.png",
-    title: "Admin Client React",
-    description: "t labore et dolore magna aliqua.t labore et dolore magna aliqua.t labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    skills: ["Node", "TypeScript", "React", "Redux", "RefreshToken", "Chart.js", "Flexbox"],
-    type: "frontend"
-  },
-  {
-    image: "https://apiko.com/blog/content/images/2020/04/pasted-image-0--1-.jpg",
-    title: "IOT Management App",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    skills: ["React Native", "TypeScript", "Axios", "JWT", "Context API", "RefreshToken", "Flexbox"],
-    type: "mobile"
-  },
-  {
-    image: "https://www.browserstack.com/blog/content/images/2020/08/API-Blog-Hero-banner-@2x.png",
-    title: "Golang API Rest",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    skills: ["Golang", "Mux", "MariaDB", "JWT", "SOLID"],
-    type: "backend"
-  },
-  {
-    image: "https://i.pinimg.com/736x/60/38/e9/6038e9e53f35da8b730f9f757d032a3f.jpg",
-    title: "Admin Client React vol 02",
-    description: "t labore et dolore magna aliqua.t labore et dolore magna aliqua.t labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    skills: ["Node", "TypeScript", "React", "Redux", "RefreshToken", "Chart.js", "Flexbox"],
-    type: "frontend"
-  },
-  {
-    image: "https://agiletech.vn/wp-content/uploads/2020/09/%E1%BA%A2nh-ch%E1%BB%A5p-M%C3%A0n-h%C3%ACnh-2020-09-15-l%C3%BAc-11.26.16.png",
-    title: "Calculator App",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    subDescription: "Lisque persius interesset his et, in quot quidam persequeris vim, ad mea essent possim iriure.",
-    skills: ["React Native", "TypeScript", "Axios", "JWT", "Context API", "RefreshToken", "Flexbox"],
-    type: "mobile"
   },
 ];
 
