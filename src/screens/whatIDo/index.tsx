@@ -8,12 +8,14 @@ import { selectTheme } from "../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
-import developer from "../../static/teste.png"
+import whatIDoDark from "../../static/whatIDoDark.png"
+import whatIDoLight from "../../static/whatIDoLight.jpg"
 
 function WhatIDo () {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
+  const localTheme = localStorage.getItem("THEME");
 
   return (
     <>
@@ -24,7 +26,9 @@ function WhatIDo () {
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           minHeight: height,
           height: "auto",
-          backgroundImage: `url(${developer})`,
+          backgroundImage: localTheme === "dark"
+            ? `url(${whatIDoDark})`
+            : `url(${whatIDoLight})`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

@@ -20,11 +20,17 @@ function PortfolioCard({ project, onClick }: Props) {
   return (
     <div
       className={styles.portfolio_card}
-      style={{backgroundColor: theme.COLORS.CARD_BACKGROUND}}
+      style={{
+        backgroundColor: theme.COLORS.CARD_BACKGROUND,
+        boxShadow: `0 0 16px ${theme.COLORS.CARD_SHADOW}`
+      }}
       onClick={onClick}
     >
       <div className={styles.portfolio_card_image}>
-        <div className={styles.portfolio_card_see_details}>
+        <div
+          className={styles.portfolio_card_see_details}
+          style={{ backgroundColor: theme.COLORS.CARD_TRANSPARENCY }}
+        >
           <TextPortfolio textAlign="left" text={`${t("ClickToSee")}`}/>
         </div>
 

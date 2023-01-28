@@ -32,7 +32,8 @@ function DetailsCard({ project, onClick }: Props) {
         className={styles.details_card_header}
         style={{
           backgroundColor: theme.COLORS.CARD_BACKGROUND,
-          borderColor: theme.COLORS.PAGE_SEPARATOR
+          borderColor: theme.COLORS.PAGE_SEPARATOR,
+          boxShadow: `0 -4px 16px 1px ${theme.COLORS.CARD_SHADOW}`
         }}
       >
         <TitleSecondary text={project.title}/>
@@ -51,7 +52,10 @@ function DetailsCard({ project, onClick }: Props) {
 
       <div
         className={styles.details_card_subcontainer}
-        style={{backgroundColor: theme.COLORS.CARD_BACKGROUND}}
+        style={{
+          backgroundColor: theme.COLORS.CARD_BACKGROUND,
+          boxShadow: `0px 8px 18px ${theme.COLORS.CARD_SHADOW}`
+        }}
       >
         <img
           className={styles.details_card_image}

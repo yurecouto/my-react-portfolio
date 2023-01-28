@@ -27,7 +27,7 @@
   width: 100%;
   padding-left: 8px;
   padding-right: 8px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid;
 }
 
 .change_lang_option_text {
@@ -35,7 +35,6 @@
   margin: 0;
   font-family: Consolas, Monaco, monospace;
   font-size: 16px;
-  color: whitesmoke;
 }
 
 .change_lang_option_icon {

@@ -8,13 +8,15 @@ import { selectTheme } from "../../providers/slices/theme.slice";
 import DetailsCard from "../../components/cards/DetailsCard";
 import PortfolioCard from "../../components/cards/PortfolioCard";
 import { TitlePage } from "../../components/texts/TitlePage";
+import FilterButton from "../../components/buttons/FilterButton";
 
 import Project from "../../interfaces/Project";
 
 import styles from "./styles.module.css";
 
-import dash from "../../static/simple_dashed.png"
-import FilterButton from "../../components/buttons/FilterButton";
+import dashDark from "../../static/dashDark.png"
+import dashLight from "../../static/dashLight.png"
+
 
 const projects: Project[] = [
   {
@@ -71,6 +73,7 @@ function Portfolio () {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
+  const localTheme = localStorage.getItem("THEME");
 
   const [openDetails, setOpenDetails] = useState<boolean>();
   const [spotLightProject, setSpotLightProject] = useState<Project>();
@@ -111,7 +114,9 @@ function Portfolio () {
           width: width > 960 ? `${width - 260}px` : `${width}px`,
           minHeight: height,
           height: "auto",
-          backgroundImage: `url(${dash})`,
+          backgroundImage: localTheme === "dark"
+            ? `url(${dashDark})`
+            : `url(${dashLight})`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "repeat",

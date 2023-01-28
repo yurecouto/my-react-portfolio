@@ -6,7 +6,8 @@ import { TitlePage } from "../../components/texts/TitlePage";
 import { useWindowSize } from "../../hooks/window";
 import { selectTheme } from "../../providers/slices/theme.slice";
 
-import keyboard from "../../static/keyboard_color.png"
+import homeDark from "../../static/homeDark.png"
+import homeLight from "../../static/homeLight.jpg"
 
 import styles from "./styles.module.css";
 
@@ -14,6 +15,7 @@ function Home () {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
+  const localTheme = localStorage.getItem("THEME");
 
   return (
     <>
@@ -23,7 +25,9 @@ function Home () {
         style={{
           width: width > 960 ? `${width - 260}px` : `${width}px` ,
           height: `${height}px`,
-          backgroundImage: `url(${keyboard})`,
+          backgroundImage: localTheme === "dark"
+            ? `url(${homeDark})`
+            : `url(${homeLight})`,
           backgroundAttachment: "fixed",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",

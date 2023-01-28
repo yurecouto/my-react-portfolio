@@ -93,7 +93,8 @@ function ChangeLanguage() {
     width > 960 ? (
       <div
         onMouseOver={handleMouseInContainer}
-        onClick={handleOpenContainer} className={styles.change_lang_container}
+        onClick={handleOpenContainer}
+        className={styles.change_lang_container}
       >
         {isOpen ? (
           <div
@@ -105,27 +106,49 @@ function ChangeLanguage() {
               style={{
                 borderTopLeftRadius: 8,
                 borderTopRightRadius: 8,
-                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER,
+                borderColor: theme.COLORS.PAGE_SEPARATOR,
               }}
               onClick={() => handleChangeLang({code: "pt_BR", icon: "openmoji:flag-brazil", name: "Portuguese"})}
             >
-              <p className={styles.change_lang_option_text}>{t("Portuguese")}</p>
+              <p
+                style={{color: theme.COLORS.TEXT_DEFAULT}}
+                className={styles.change_lang_option_text}
+              >
+                {t("Portuguese")}
+              </p>
               <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-brazil"/>
             </div>
             <div
               className={styles.change_lang_option}
-              style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER }}
+              style={{
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER,
+                borderColor: theme.COLORS.PAGE_SEPARATOR,
+              }}
               onClick={() => handleChangeLang({code: "et", icon: "openmoji:flag-estonia", name: "Estonian"})}
             >
-              <p className={styles.change_lang_option_text}>{t("Estonian")}</p>
+              <p
+                style={{color: theme.COLORS.TEXT_DEFAULT}}
+                className={styles.change_lang_option_text}
+              >
+                {t("Estonian")}
+              </p>
               <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-estonia"/>
             </div>
             <div
               className={styles.change_lang_option}
-              style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER }}
+              style={{
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER,
+                borderColor: theme.COLORS.PAGE_SEPARATOR,
+              }}
               onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-united-kingdom", name: "English"})}
             >
-              <p className={styles.change_lang_option_text}>{t("English")}</p>
+              <p
+                style={{color: theme.COLORS.TEXT_DEFAULT}}
+                className={styles.change_lang_option_text}
+              >
+                {t("English")}
+              </p>
               <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-united-kingdom"/>
             </div>
             <div
@@ -134,11 +157,17 @@ function ChangeLanguage() {
                 border: 0,
                 borderEndEndRadius: 8,
                 borderEndStartRadius: 8,
-                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER,
+                borderColor: theme.COLORS.PAGE_SEPARATOR,
               }}
               onClick={() => handleChangeLang({code: "es_ES", icon: "openmoji:flag-spain", name: "Spanish"})}
             >
-              <p className={styles.change_lang_option_text}>{t("Spanish")}</p>
+              <p
+                style={{color: theme.COLORS.TEXT_DEFAULT}}
+                className={styles.change_lang_option_text}
+              >
+                {t("Spanish")}
+              </p>
               <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-spain"/>
             </div>
 
@@ -155,7 +184,12 @@ function ChangeLanguage() {
             : theme.COLORS.HEADER_BACKGROUND
           }}
         >
-          <p className={styles.change_lang_option_text}>{t(actualLang.name)}</p>
+          <p
+            style={{color: theme.COLORS.TEXT_DEFAULT}}
+            className={styles.change_lang_option_text}
+          >
+            {t(actualLang.name)}
+          </p>
           <Icon className={styles.change_lang_option_icon} icon={actualLang.icon}/>
         </div>
 
@@ -186,7 +220,8 @@ function ChangeLanguage() {
               style={{
                 borderTopLeftRadius: 8,
                 borderTopRightRadius: 8,
-                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER,
+                borderColor: theme.COLORS.PAGE_SEPARATOR,
               }}
               onClick={() => handleChangeLang({code: "pt_BR", icon: "openmoji:flag-brazil", name: "Portuguese"})}
             >
@@ -194,14 +229,20 @@ function ChangeLanguage() {
             </div>
             <div
               className={styles.change_lang_option}
-              style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER }}
+              style={{
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER,
+                borderColor: theme.COLORS.PAGE_SEPARATOR,
+              }}
               onClick={() => handleChangeLang({code: "et", icon: "openmoji:flag-estonia", name: "Estonian"})}
             >
               <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-estonia"/>
             </div>
             <div
               className={styles.change_lang_option}
-              style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER }}
+              style={{
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER,
+                borderColor: theme.COLORS.PAGE_SEPARATOR,
+              }}
               onClick={() => handleChangeLang({code: "en_US", icon: "openmoji:flag-united-kingdom", name: "English"})}
             >
               <Icon className={styles.change_lang_option_icon} icon="openmoji:flag-united-kingdom"/>
@@ -212,7 +253,8 @@ function ChangeLanguage() {
                 border: 0,
                 borderEndEndRadius: 8,
                 borderEndStartRadius: 8,
-                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER
+                backgroundColor: theme.COLORS.HEADER_BACKGROUND_HOVER,
+                borderColor: theme.COLORS.PAGE_SEPARATOR,
               }}
               onClick={() => handleChangeLang({code: "es_ES", icon: "openmoji:flag-spain", name: "Spanish"})}
             >

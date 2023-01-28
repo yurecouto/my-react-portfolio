@@ -35,7 +35,7 @@ function TimelineCard({
           <div className={styles.timeline_card_line_container}>
             <div
               className={styles.timeline_card_line_top}
-              style={{backgroundColor: theme.COLORS.TEXT_DEFAULT}}
+              style={{backgroundColor: theme.COLORS.PAGE_SEPARATOR}}
             />
             <div
               className={styles.timeline_card_indicator}
@@ -43,12 +43,12 @@ function TimelineCard({
             >
               <div
                 className={styles.timeline_card_indicator_core}
-                style={{backgroundColor: theme.COLORS.TEXT_DEFAULT}}
+                style={{backgroundColor: theme.COLORS.PAGE_SEPARATOR}}
               />
             </div>
             <div
               className={styles.timeline_card_line_bottom}
-              style={{backgroundColor: theme.COLORS.TEXT_DEFAULT}}
+              style={{backgroundColor: theme.COLORS.PAGE_SEPARATOR}}
             />
           </div>
         </div>

@@ -66,7 +66,10 @@ function ContactCard({
           onMouseOver={handleMouseIn}
           onMouseOut={handleMouseOut}
           className={styles.contact_sub_container_row}
-          style={{backgroundColor: theme.COLORS.CARD_BACKGROUND}}
+          style={{
+            backgroundColor: theme.COLORS.CARD_BACKGROUND,
+            boxShadow: `0 0 8px ${theme.COLORS.CARD_SHADOW}`
+          }}
         >
           <div className={styles.contact_sub_container_icon}>
             <Icon
@@ -86,7 +89,10 @@ function ContactCard({
         onMouseOver={handleMouseIn}
         onMouseOut={handleMouseOut}
         className={styles.contact_sub_container_row}
-        style={{backgroundColor: theme.COLORS.CARD_BACKGROUND}}
+        style={{
+          backgroundColor: theme.COLORS.CARD_BACKGROUND,
+          boxShadow: `0 0 8px ${theme.COLORS.CARD_SHADOW}`
+        }}
         onClick={() => copyToClipboard(text)}
       >
         <div className={styles.contact_sub_container_icon}>

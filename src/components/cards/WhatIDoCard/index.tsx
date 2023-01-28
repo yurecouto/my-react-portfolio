@@ -36,7 +36,10 @@ function WhatIDoCard({
       className={styles.what_i_do_card}
       onMouseOver={handleMouseIn}
       onMouseOut={handleMouseOut}
-      style={{ backgroundColor: theme.COLORS.CARD_BACKGROUND }}
+      style={{
+        backgroundColor: theme.COLORS.CARD_BACKGROUND,
+        boxShadow: `0 0 16px ${theme.COLORS.CARD_SHADOW}`
+      }}
     >
       <div
         className={styles.what_i_do_card_icon_container}
@@ -46,7 +49,7 @@ function WhatIDoCard({
           icon={icon}
           style={{ color: hover
             ? theme.COLORS.TEXT_SUB_HIGHLIGHT
-            : theme.COLORS.TEXT_DEFAULT }}
+            : theme.COLORS.TEXT_SECONDARY }}
           className={styles.what_i_do_card_icon}
         />
       </div>

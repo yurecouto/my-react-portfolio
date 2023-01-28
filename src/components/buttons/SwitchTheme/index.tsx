@@ -1,15 +1,36 @@
 import { Icon } from "@iconify/react";
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { selectTheme } from "../../../providers/slices/theme.slice";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { setTheme } from "../../../providers/slices/theme.slice";
 
 import styles from "./styles.module.css";
 
+import dark from "../../../themes/dark.theme";
+import light from "../../../themes/light.theme";
+
 function SwitchTheme() {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const theme = useSelector(selectTheme);
-  // const [nightMode, setNightMode] = useState<boolean>(localTheme === "dark");
-  // const localTheme = localStorage.getItem("THEME")
+  const localTheme = localStorage.getItem("THEME");
+  const [nightMode, setNightMode] = useState<boolean>(localTheme === "dark");
+
+  const handleChangeTheme = async () => {
+    if (localTheme === "light") {
+      setNightMode(true)
+    } else {
+      setNightMode(false)
+    }
+  }
+
+  useEffect(() => {
+    if (nightMode) {
+      dispatch(setTheme(dark))
+      localStorage.setItem("THEME", "dark")
+    } else {
+      dispatch(setTheme(light))
+      localStorage.setItem("THEME", "light")
+    }
+  }, [dispatch, nightMode])
 
   return (
     <div className={styles.switch_container}>
@@ -17,6 +38,8 @@ function SwitchTheme() {
         className={styles.input_switch}
         type="checkbox"
         id="switch"
+        checked={nightMode}
+        onChange={handleChangeTheme}
       />
       <label
         className={styles.label_switch}
