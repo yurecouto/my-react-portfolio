@@ -6,7 +6,10 @@ export default interface Timeline {
     "et": string;
   };
   where: string;
-  when: string;
+  when: {
+    start: string;
+    end: string;
+  };
   description: {
     "pt_BR": string;
     "en_US": string;

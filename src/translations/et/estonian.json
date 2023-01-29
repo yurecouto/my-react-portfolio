@@ -41,6 +41,9 @@
     "Experience": "Kogemusi",
     "Education": "Koolitus",
     "Technologies": "Tehnoloogiad",
+    "From": "Alustada",
+    "To": "Lõpp",
+    "Currently": "Hetkel",
 
     "ClickToSee": "Lisateabe saamiseks klõpsake",
     "AccessProject": "Juurdepääsuprojekt",

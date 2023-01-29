@@ -79,6 +79,15 @@
   transition: 0.2s;
 }
 
+.about_me_info_download_a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
 .about_me_info_download:hover {
   transform: scale(1.04);
   cursor: pointer;

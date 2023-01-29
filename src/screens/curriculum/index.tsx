@@ -13,6 +13,7 @@ import Skill from "../../interfaces/Skill";
 import Timeline from "../../interfaces/Timeline";
 import { selectTheme } from "../../providers/slices/theme.slice";
 import api from "../../services/api";
+import { shuffleSkills } from "../../utils/shuffleSkills";
 
 import styles from "./styles.module.css";
 
@@ -47,8 +48,7 @@ function Curriculum () {
     const fetch = async () => {
       const response = await api.get(`skill/showall`);
 
-
-      setSkills(response.data);
+      setSkills(shuffleSkills(response.data));
     }
 
     fetch()

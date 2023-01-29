@@ -41,6 +41,9 @@
     "Experience": "Experience",
     "Education": "Education",
     "Technologies": "Technologies",
+    "From": "From",
+    "To": "To",
+    "Currently": "Currently",
 
     "ClickToSee": "Click for more details",
     "AccessProject": "Access Project",

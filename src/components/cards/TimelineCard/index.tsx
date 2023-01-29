@@ -1,8 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+
 import Timeline from "../../../interfaces/Timeline";
 import { selectLanguage } from "../../../providers/slices/language.slice";
 import { selectTheme } from "../../../providers/slices/theme.slice";
+
 import { TextCurriculum } from "../../texts/TextCurriculum";
 import { TextCurriculumSecondary } from "../../texts/TextCurriculumSecondary";
 import { TitleCurriculum } from "../../texts/TitleCurriculum";
@@ -17,6 +20,8 @@ function TimelineCard({
   timeline
   }: Props) {
   const theme = useSelector(selectTheme);
+  const { t } = useTranslation();
+
   const language:
   "pt_BR" |
   "en_US" |
@@ -28,8 +33,21 @@ function TimelineCard({
       <div className={styles.timeline_card_container}>
 
         <div className={styles.timeline_card_column}>
-          <div className={styles.timeline_card_when}>
-            <TextCurriculumSecondary textAlign="right" text={timeline.when} />
+          <div
+            className={styles.timeline_card_when}
+            style={{borderColor: theme.COLORS.PAGE_SEPARATOR}}
+          >
+            <div className={styles.timeline_card_when_row}>
+              <TextCurriculumSecondary textAlign="right" text={`${t("From")}:`} />
+              <TextCurriculumSecondary textAlign="right" text={`${timeline.when.start}`} />
+            </div>
+            <div className={styles.timeline_card_when_row}>
+              <TextCurriculumSecondary textAlign="right" text={`${t("To")}:`} />
+              <TextCurriculumSecondary textAlign="right" text={`${timeline.when.end
+                ? timeline.when.end
+                : t("Currently")}`}
+              />
+            </div>
           </div>
           <div className={styles.timeline_card_where}>
             <TextCurriculumSecondary textAlign="right" text={timeline.where} />

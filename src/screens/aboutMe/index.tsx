@@ -23,6 +23,8 @@ function AboutMe({
   const { t } = useTranslation();
   const theme = useSelector(selectTheme);
 
+  const cvPortuguese = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/pdf/Curr%C3%ADculo_Yure_Couto.pdf"
+
   return (
     <>
       <div
@@ -112,8 +114,15 @@ function AboutMe({
               className={styles.about_me_info_download}
               style={{ backgroundColor: theme.COLORS.TEXT_HIGHLIGHT}}
             >
-              <TextDefault text={`${t("DownloadCV")}`}/>
-              <IconDefault icon="ic:round-download" />
+              <a
+                href={cvPortuguese}
+                rel="noreferrer"
+                target="_blank"
+                className={styles.about_me_info_download_a}
+              >
+                <TextDefault text={`${t("DownloadCV")}`}/>
+                <IconDefault icon="ic:round-download" />
+              </a>
             </div>
           </div>
         </div>
