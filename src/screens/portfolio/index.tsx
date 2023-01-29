@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
@@ -16,33 +16,7 @@ import styles from "./styles.module.css";
 
 import dashDark from "../../static/dashDark.png"
 import dashLight from "../../static/dashLight.png"
-
-const projects: Project[] = [
-  {
-    image: "https://bs-uploads.toptal.io/blackfish-uploads/components/seo/content/og_image_file/og_image/1127977/secure-rest-api-in-nodejs-18f43b3033c239da5d2525cfd9fdc98f.png",
-    title: {
-      en_US: "titulo em ingles",
-      es_ES: "titulo em espanhol",
-      pt_BR: "titulo em portugues",
-      et: "titulo em estoniano"
-    },
-    description: {
-      en_US: "descricao em ingles",
-      es_ES: "descricao em espanhol",
-      pt_BR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      et: "descricao em estoniano"
-    },
-    subDescription: {
-      en_US: "descricao em ingles",
-      es_ES: "descricao em espanhol",
-      pt_BR: "descricao em portugues",
-      et: "descricao em estoniano"
-    },
-    link: "https://wordcounter.net/character-count",
-    skills: ["Node", "TypeScript", "Express", "JWT", "MongoDB", "BCrypt", "SOLID"],
-    type: "backend"
-  },
-];
+import api from "../../services/api";
 
 function Portfolio () {
   const { t } = useTranslation();
@@ -52,7 +26,18 @@ function Portfolio () {
 
   const [openDetails, setOpenDetails] = useState<boolean>();
   const [spotLightProject, setSpotLightProject] = useState<Project>();
+  const [projects, setProjects] = useState<Project[]>([]);
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects)
+
+  useEffect(() => {
+    const fetch = async () => {
+      const response = await api.get(`project/showall`);
+      setFilteredProjects(response.data.reverse());
+      setProjects(response.data.reverse())
+    }
+
+    fetch()
+  }, [])
 
   const handleOpenDetails = async (project: Project) => {
     setSpotLightProject(project)

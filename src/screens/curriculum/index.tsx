@@ -28,7 +28,7 @@ function Curriculum () {
   useEffect(() => {
     const fetch = async () => {
       const response = await api.get(`education/showall`);
-      setEducations(response.data);
+      setEducations(response.data.reverse());
     }
 
     fetch()
@@ -37,7 +37,7 @@ function Curriculum () {
   useEffect(() => {
     const fetch = async () => {
       const response = await api.get(`experience/showall`);
-      setExperiences(response.data);
+      setExperiences(response.data.reverse());
     }
 
     fetch()
@@ -46,6 +46,8 @@ function Curriculum () {
   useEffect(() => {
     const fetch = async () => {
       const response = await api.get(`skill/showall`);
+
+
       setSkills(response.data);
     }
 
