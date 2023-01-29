@@ -15,6 +15,7 @@
 
     "Name": "Nombre",
     "Email": "E-mail",
+    "Phone": "Teléfono",
     "BasedIn": "Viviendo en",
     "DownloadCV": "Descargar mi currículum",
 
@@ -42,6 +43,7 @@
     "Technologies": "Tecnologías",
 
     "ClickToSee": "Haga clic para más detalles",
+    "AccessProject": "Accede al Proyecto",
 
     "CopiedtoClipboard": "Copiado al portapapeles"
   }

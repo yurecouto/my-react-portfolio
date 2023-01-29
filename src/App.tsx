@@ -1,7 +1,8 @@
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 
 import { MainContainer } from "./components/containers/MainContainer";
 import { Header } from "./components/header";
+import Info from "./interfaces/Info";
 import AboutMe from "./screens/aboutMe";
 import Contact from "./screens/contact";
 import Curriculum from "./screens/curriculum";
@@ -9,6 +10,7 @@ import Curriculum from "./screens/curriculum";
 import Home from "./screens/home";
 import Portfolio from "./screens/portfolio";
 import WhatIDo from "./screens/whatIDo";
+import api from "./services/api";
 import i18n from "./translations/i18n";
 
 function App() {
@@ -16,6 +18,17 @@ function App() {
     document.body.style.padding = "0";
     document.body.style.margin = "0";
   }, []);
+
+  const [info, setInfo] = useState<Info>()
+
+  useEffect(() => {
+    const fetch = async () => {
+      const response = await api.get(`user/show/${process.env.REACT_APP_USER_ID}`);
+      setInfo(response.data);
+    }
+
+    fetch()
+  }, [])
 
   useEffect(() => {
     if (!localStorage.getItem("LANGUAGE")) {
@@ -75,11 +88,11 @@ function App() {
       <Header/>
       <MainContainer>
         <Home/>
-        <AboutMe/>
+        <AboutMe info={info}/>
         <WhatIDo/>
         <Curriculum/>
         <Portfolio/>
-        <Contact/>
+        <Contact info={info}/>
       </MainContainer>
     </Suspense>
   );

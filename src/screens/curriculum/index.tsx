@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 
@@ -9,8 +9,10 @@ import { SubTitleSecondary } from "../../components/texts/SubTitleSecondary";
 import { TitlePage } from "../../components/texts/TitlePage";
 
 import { useWindowSize } from "../../hooks/window";
+import Skill from "../../interfaces/Skill";
 import Timeline from "../../interfaces/Timeline";
 import { selectTheme } from "../../providers/slices/theme.slice";
+import api from "../../services/api";
 
 import styles from "./styles.module.css";
 
@@ -19,40 +21,36 @@ function Curriculum () {
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
 
-  const timelines: Timeline[] = [
-    {
-      what: {
-        pt_BR: "Titulo em portugues.",
-        en_US: "Titulo em ingles.",
-        es_ES: "Titulo em espanhol.",
-        et: "Titulo em estoniano.",
-      },
-      where: "SPRO IT Solutions",
-      when: "ago - 2022 / now",
-      description: {
-        pt_BR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        en_US: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        es_ES: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        et: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      },
-    },
-    {
-      what: {
-        pt_BR: "Titulo em portugues.",
-        en_US: "Titulo em ingles.",
-        es_ES: "Titulo em espanhol.",
-        et: "Titulo em estoniano.",
-      },
-      where: "UNIDESC - Centro Universitário de Desenvolvimento do Centro-Oeste",
-      when: "jan - 2022 / now",
-      description: {
-        pt_BR: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        en_US: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        es_ES: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        et: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      },
-    },
-  ];
+  const [educations, setEducations] = useState<Timeline[]>();
+  const [experiences, setExperiences] = useState<Timeline[]>();
+  const [skills, setSkills] = useState<Skill[]>();
+
+  useEffect(() => {
+    const fetch = async () => {
+      const response = await api.get(`education/showall`);
+      setEducations(response.data);
+    }
+
+    fetch()
+  }, [])
+
+  useEffect(() => {
+    const fetch = async () => {
+      const response = await api.get(`experience/showall`);
+      setExperiences(response.data);
+    }
+
+    fetch()
+  }, [])
+
+  useEffect(() => {
+    const fetch = async () => {
+      const response = await api.get(`skill/showall`);
+      setSkills(response.data);
+    }
+
+    fetch()
+  }, [])
 
   return (
     <>
@@ -77,9 +75,11 @@ function Curriculum () {
                 <SubTitleDefault text={`${t("Experience")}`}/>
               </div>
               <div className={styles.curriculum_professional_cards}>
-                <TimelineCard
-                  timeline={timelines[0]}
-                />
+                {experiences?.map((experience) => (
+                  <TimelineCard
+                    timeline={experience}
+                  />
+                ))}
               </div>
             </div>
             <div className={styles.curriculum_education}>
@@ -87,9 +87,11 @@ function Curriculum () {
                 <SubTitleDefault text={`${t("Education")}`}/>
               </div>
               <div className={styles.curriculum_education_cards}>
-                <TimelineCard
-                  timeline={timelines[1]}
-                />
+                {educations?.map((education) => (
+                  <TimelineCard
+                    timeline={education}
+                  />
+                ))}
               </div>
             </div>
           </div>
@@ -106,10 +108,9 @@ function Curriculum () {
                 <SubTitleSecondary text="Back-end"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
-                <SkillCard skill="Golang"/>
-                <SkillCard skill="TypeScript"/>
-                <SkillCard skill="Node"/>
-                <SkillCard skill="Rest API"/>
+                {skills?.map((skill) => skill.type === "backend" && (
+                  <SkillCard skill={skill.name}/>
+                ))}
               </div>
             </div>
 
@@ -118,12 +119,9 @@ function Curriculum () {
                 <SubTitleSecondary text="Front-end"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
-                <SkillCard skill="React"/>
-                <SkillCard skill="Redux"/>
-                <SkillCard skill="Axios"/>
-                <SkillCard skill="CSS"/>
-                <SkillCard skill="HTML"/>
-                <SkillCard skill="Flexbox"/>
+                {skills?.map((skill) => skill.type === "frontend" && (
+                  <SkillCard skill={skill.name}/>
+                ))}
               </div>
             </div>
 
@@ -132,9 +130,9 @@ function Curriculum () {
                 <SubTitleSecondary text="Data Base"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
-                <SkillCard skill="MongoDB"/>
-                <SkillCard skill="PostgreSQL"/>
-                <SkillCard skill="MySQL"/>
+                {skills?.map((skill) => skill.type === "database" && (
+                  <SkillCard skill={skill.name}/>
+                ))}
               </div>
             </div>
 
@@ -143,9 +141,9 @@ function Curriculum () {
                 <SubTitleSecondary text="Mobile"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
-                <SkillCard skill="Dart"/>
-                <SkillCard skill="Flutter"/>
-                <SkillCard skill="React Native"/>
+                {skills?.map((skill) => skill.type === "mobile" && (
+                  <SkillCard skill={skill.name}/>
+                ))}
               </div>
             </div>
           </div>

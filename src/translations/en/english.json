@@ -20,6 +20,7 @@
 
     "Name": "Name",
     "Email": "E-mail",
+    "Phone": "Phone",
     "BasedIn": "Based in",
     "DownloadCV": "Download my CV",
 
@@ -42,6 +43,7 @@
     "Technologies": "Technologies",
 
     "ClickToSee": "Click for more details",
+    "AccessProject": "Access Project",
 
     "CopiedtoClipboard": "Copied to Clipboard"
   }

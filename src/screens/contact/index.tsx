@@ -9,11 +9,17 @@ import ContactCard from "../../components/cards/ContactCard";
 import { TitlePage } from "../../components/texts/TitlePage";
 
 import styles from "./styles.module.css";
+import Info from "../../interfaces/Info";
 
-function Contact () {
+interface Props {
+  info: Info | undefined;
+}
+
+function Contact({
+  info
+  }: Props) {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
-
   const theme = useSelector(selectTheme);
 
   return (
@@ -35,37 +41,37 @@ function Contact () {
             color={theme.COLORS.LINKEDIN}
             name="Linkedin"
             icon="mdi:linkedin"
-            link="https://www.linkedin.com/in/yure-couto/"
+            link={info?.linkedin}
           />
           <ContactCard
             color={theme.COLORS.GITHUB}
             name="Github"
             icon="uim:github-alt"
-            link="https://github.com/yurecouto"
+            link={info?.github}
           />
           <ContactCard
             color={theme.COLORS.GMAIL}
             name="Gmail"
             icon="mdi:gmail"
-            text="yurecouto.dev@gmail.com"
+            text={info?.gmail}
           />
           <ContactCard
             color={theme.COLORS.OUTLOOK}
             name="Outlook"
             icon="file-icons:microsoft-outlook"
-            text="yure.couto@outlook.com"
+            text={info?.outlook}
           />
           <ContactCard
             color={theme.COLORS.WHATSAPP}
             name="WhatsApp"
             icon="ic:baseline-whatsapp"
-            text="+55(61)99418-5400"
+            text={info?.number}
           />
           <ContactCard
             color={theme.COLORS.TELEGRAM}
             name="Telegram"
             icon="ic:baseline-telegram"
-            text="+55(61)99418-5400"
+            text={info?.number}
           />
         </div>
       </div>

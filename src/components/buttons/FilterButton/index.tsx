@@ -34,7 +34,8 @@ function FilterButton ({
       className={styles.portfolio_menu_option}
       onClick={onClick}
       style={{
-        backgroundColor: hover ? theme.COLORS.TEXT_HIGHLIGHT : "transparent"
+        backgroundColor: hover ? theme.COLORS.TEXT_HIGHLIGHT : "transparent",
+        boxShadow: hover ? `0 0 8px ${theme.COLORS.CARD_SHADOW}` : "none"
       }}
     >
       <TextDefault text={text}/>

@@ -15,6 +15,7 @@
 
     "Name": "Nimi",
     "Email": "E-mail",
+    "Phone": "Telefon",
     "BasedIn": "Sisse elades",
     "DownloadCV": "Laadige alla minu CV",
 
@@ -42,6 +43,7 @@
     "Technologies": "Tehnoloogiad",
 
     "ClickToSee": "Lisateabe saamiseks klõpsake",
+    "AccessProject": "Juurdepääsuprojekt",
 
     "CopiedtoClipboard": "Kopeeritud lõikelauale"
   }

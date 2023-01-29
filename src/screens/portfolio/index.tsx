@@ -54,8 +54,6 @@ function Portfolio () {
   const [spotLightProject, setSpotLightProject] = useState<Project>();
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects)
 
-
-
   const handleOpenDetails = async (project: Project) => {
     setSpotLightProject(project)
     setOpenDetails(true)
@@ -100,19 +98,7 @@ function Portfolio () {
       >
         <div className={styles.portfolio_container_title}>
           <TitlePage text={`${t("Portfolio")}:`}/>
-        </div>
-
-        <div className={styles.portfolio_sub_container}>
-          {openDetails && spotLightProject
-          ? (
-            <DetailsCard
-              project={spotLightProject}
-              onClick={handleCloseDetails}
-            />
-          )
-          : (
-            <>
-              <div className={styles.portfolio_menu}>
+          <div className={styles.portfolio_menu}>
                 <div className={styles.portfolio_menu_items}>
                   <FilterButton
                     text="All"
@@ -135,10 +121,22 @@ function Portfolio () {
                   />
                 </div>
               </div>
+        </div>
 
+        <div className={styles.portfolio_sub_container}>
+          {openDetails && spotLightProject
+          ? (
+            <DetailsCard
+              project={spotLightProject}
+              onClick={handleCloseDetails}
+            />
+          )
+          : (
+            <>
               <div className={styles.portfolio_card_container}>
-                {filteredProjects.map(project => (
+                {filteredProjects.map((project, id) => (
                   <PortfolioCard
+                    key={id}
                     project={project}
                     onClick={() => handleOpenDetails(project)}
                   />
