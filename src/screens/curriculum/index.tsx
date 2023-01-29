@@ -21,9 +21,9 @@ function Curriculum () {
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
 
-  const [educations, setEducations] = useState<Timeline[]>();
-  const [experiences, setExperiences] = useState<Timeline[]>();
-  const [skills, setSkills] = useState<Skill[]>();
+  const [educations, setEducations] = useState<Timeline[]>([]);
+  const [experiences, setExperiences] = useState<Timeline[]>([]);
+  const [skills, setSkills] = useState<Skill[]>([]);
 
   useEffect(() => {
     const fetch = async () => {

@@ -10,14 +10,14 @@ import { TitlePage } from "../../components/texts/TitlePage";
 
 import styles from "./styles.module.css";
 
-import whatIDoDark from "../../static/whatIDoDark.png"
-import whatIDoLight from "../../static/whatIDoLight.jpg"
-
 function WhatIDo () {
   const { t } = useTranslation();
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
   const localTheme = localStorage.getItem("THEME");
+
+  const whatIDoDark = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/whatIDoDark.png"
+  const whatIDoLight = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/whatIDoLight.jpg"
 
   return (
     <>

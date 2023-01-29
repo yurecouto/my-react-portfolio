@@ -48,7 +48,7 @@ function App() {
           i18n.changeLanguage("en_US")
           localStorage.setItem("LANGUAGE", JSON.stringify({
             "code": "en_US",
-            "icon": "openmoji:flag-canada",
+            "icon": "openmoji:flag-united-kingdom",
             "name": "English"
           }))
           break

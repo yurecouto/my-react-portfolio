@@ -14,8 +14,6 @@ import Project from "../../interfaces/Project";
 
 import styles from "./styles.module.css";
 
-import dashDark from "../../static/dashDark.png"
-import dashLight from "../../static/dashLight.png"
 import api from "../../services/api";
 
 function Portfolio () {
@@ -23,6 +21,9 @@ function Portfolio () {
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
   const localTheme = localStorage.getItem("THEME");
+
+  const dashDark = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/dashDark.png"
+  const dashLight = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/dashLight.png"
 
   const [openDetails, setOpenDetails] = useState<boolean>();
   const [spotLightProject, setSpotLightProject] = useState<Project>();

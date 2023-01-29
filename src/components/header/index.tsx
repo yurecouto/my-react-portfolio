@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { useWindowSize } from "../../hooks/window"
 
 import styles from "./styles.module.css";
-import avatar from "../../static/avatar.png"
 import { TitleDefault } from "../texts/TitleDefault";
 import { TextList } from "../texts/TextList";
 import { Icon } from "@iconify/react";
@@ -18,6 +17,8 @@ function Header() {
   const { t } = useTranslation();
   const { width } = useWindowSize();
   const theme = useSelector(selectTheme);
+
+  const avatar = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/avatar.png"
 
   const [hoverIcon, setHoverIcon] = useState<boolean>();
   const [isOpen, setIsOpen] = useState<boolean>(false);

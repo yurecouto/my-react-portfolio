@@ -8,9 +8,6 @@ import { selectTheme } from "../../providers/slices/theme.slice";
 import { TextAutoWrite } from "../../components/texts/TextAutoWrite";
 import { TitlePage } from "../../components/texts/TitlePage";
 
-import homeDark from "../../static/homeDark.png"
-import homeLight from "../../static/homeLight.jpg"
-
 import styles from "./styles.module.css";
 
 function Home () {
@@ -18,6 +15,9 @@ function Home () {
   const { height, width } = useWindowSize();
   const theme = useSelector(selectTheme);
   const localTheme = localStorage.getItem("THEME");
+
+  const homeDark = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/homeDark.png"
+  const homeLight = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/homeLight.jpg"
 
   return (
     <>
