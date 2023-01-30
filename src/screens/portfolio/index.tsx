@@ -58,8 +58,9 @@ function Portfolio () {
     if (filter === "all") {
       setFilteredProjects([...projects])
     } else {
+      console.log(filter)
       setFilteredProjects(projects.filter((project) =>
-        project.type === filter
+        project.type.includes(filter)
       ));
     }
   }

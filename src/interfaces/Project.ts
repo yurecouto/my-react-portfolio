@@ -1,3 +1,5 @@
+type Type = "backend" | "frontend" | "mobile";
+
 export default interface Project {
   title: {
     "pt_BR": string;
@@ -19,6 +21,6 @@ export default interface Project {
   };
   image: string;
   skills: string[];
-  type: "backend" | "frontend" | "mobile" | "all";
+  type: Type[];
   link: string;
 }

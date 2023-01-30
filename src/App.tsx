@@ -95,12 +95,12 @@ function App() {
     (isLoading ? (
       <LoadingContainer>
         <Icon
-        icon="eos-icons:bubble-loading"
-        style={{
-          height: "64px",
-          width: "64px",
-          color: theme.COLORS.TEXT_HIGHLIGHT
-        }}
+          icon="eos-icons:bubble-loading"
+          style={{
+            height: "64px",
+            width: "64px",
+            color: theme.COLORS.TEXT_HIGHLIGHT
+          }}
         />
       </LoadingContainer>
     ) : (
