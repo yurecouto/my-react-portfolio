@@ -1,8 +1,12 @@
+import { Icon } from "@iconify/react";
 import React, { Suspense, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
+import { LoadingContainer } from "./components/containers/LoadingContainer";
 import { MainContainer } from "./components/containers/MainContainer";
 import { Header } from "./components/header";
 import Info from "./interfaces/Info";
+import { selectTheme } from "./providers/slices/theme.slice";
 import AboutMe from "./screens/aboutMe";
 import Contact from "./screens/contact";
 import Curriculum from "./screens/curriculum";
@@ -14,17 +18,21 @@ import api from "./services/api";
 import i18n from "./translations/i18n";
 
 function App() {
+  const theme = useSelector(selectTheme);
+
+  const [info, setInfo] = useState<Info>()
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+
   useEffect(() => {
     document.body.style.padding = "0";
     document.body.style.margin = "0";
   }, []);
 
-  const [info, setInfo] = useState<Info>()
-
   useEffect(() => {
     const fetch = async () => {
       const response = await api.get(`user/show/${process.env.REACT_APP_USER_ID}`);
       setInfo(response.data);
+      setIsLoading(false)
     }
 
     fetch()
@@ -84,17 +92,30 @@ function App() {
   })
 
   return (
-    <Suspense fallback="loading">
-      <Header/>
-      <MainContainer>
-        <Home/>
-        <AboutMe info={info}/>
-        <WhatIDo/>
-        <Curriculum/>
-        <Portfolio/>
-        <Contact info={info}/>
-      </MainContainer>
-    </Suspense>
+    (isLoading ? (
+      <LoadingContainer>
+        <Icon
+        icon="eos-icons:bubble-loading"
+        style={{
+          height: "64px",
+          width: "64px",
+          color: theme.COLORS.TEXT_HIGHLIGHT
+        }}
+        />
+      </LoadingContainer>
+    ) : (
+      <Suspense fallback="loading">
+        <Header/>
+        <MainContainer>
+          <Home/>
+          <AboutMe info={info}/>
+          <WhatIDo/>
+          <Curriculum/>
+          <Portfolio/>
+          <Contact info={info}/>
+        </MainContainer>
+      </Suspense>
+    ))
   );
 }
 
