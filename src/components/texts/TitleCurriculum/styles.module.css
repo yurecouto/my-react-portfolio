@@ -39,4 +39,8 @@
   }
 }
 
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 400px) {
+  .title_curriculum {
+    font-size: 16px;
+  }
+}

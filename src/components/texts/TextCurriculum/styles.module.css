@@ -1,7 +1,7 @@
 .text_curriculum {
   margin: 0;
   padding: 0;
-  font-size: 17.5px;
+  font-size: 17px;
   font-weight: lighter;
   font-family: Consolas, Monaco, monospace;
 }
@@ -29,23 +29,23 @@
 
 @media screen and (max-width: 560px) {
   .text_curriculum {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 480px) {
   .text_curriculum {
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 
 @media screen and (max-width: 400px) {
   .text_curriculum {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 360px) {
   .text_curriculum {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
