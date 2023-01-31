@@ -75,6 +75,10 @@
   align-items: center;
 }
 
+.details_card_title {
+  width: 90%;
+}
+
 @media screen and (max-width: 1760px) {}
 @media screen and (max-width: 1680px) {}
 @media screen and (max-width: 1600px) {
@@ -127,7 +131,15 @@
   }
 }
 @media screen and (max-width: 864px) {}
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .details_card_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+  }
+}
 @media screen and (max-width: 704px) {}
 @media screen and (max-width: 640px) {}
 @media screen and (max-width: 560px) {}

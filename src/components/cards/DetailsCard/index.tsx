@@ -50,7 +50,9 @@ function DetailsCard({ project, onClick }: Props) {
           boxShadow: `0 -4px 16px 1px ${theme.COLORS.CARD_SHADOW}`
         }}
       >
-        <TitleSecondary text={project.title[language]}/>
+        <div className={styles.details_card_title}>
+          <TitleSecondary textAlign="left" text={project.title[language]}/>
+        </div>
 
         <Icon
           onMouseOver={handleMouseIn}
