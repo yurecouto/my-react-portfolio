@@ -140,7 +140,7 @@
 
   .about_me_sub_container_text {
     width: 90%;
-    height: 420px;
+    height: auto;
   }
 
   .about_me_sub_container_info {

@@ -12,3 +12,22 @@
   align-items: center;
   width: 100%;
 }
+
+.contact_title {
+  margin-top: 64px;
+  margin-bottom: 64px;
+}
+
+@media screen and (max-width: 960px) {}
+@media screen and (max-width: 864px) {}
+@media screen and (max-width: 768px) {
+  .contact_title {
+    margin-top: 64px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 704px) {}
+@media screen and (max-width: 640px) {}
+@media screen and (max-width: 560px) {}
+@media screen and (max-width: 480px) {}
+@media screen and (max-width: 400px) {}

@@ -14,9 +14,18 @@
 @media screen and (max-width: 1120px) {}
 @media screen and (max-width: 960px) {}
 @media screen and (max-width: 864px) {}
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .text_secondary {
+    font-size: 15px;
+  }
+}
 @media screen and (max-width: 704px) {}
 @media screen and (max-width: 640px) {}
 @media screen and (max-width: 560px) {}
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+  .text_secondary {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {}
 @media screen and (max-width: 400px) {}

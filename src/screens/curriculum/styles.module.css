@@ -143,7 +143,12 @@
 @media screen and (max-width: 1120px) {}
 @media screen and (max-width: 960px) {}
 @media screen and (max-width: 864px) {}
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .curriculum_title {
+    margin-bottom: 32px;
+  }
+
+}
 @media screen and (max-width: 704px) {}
 @media screen and (max-width: 640px) {}
 @media screen and (max-width: 560px) {}

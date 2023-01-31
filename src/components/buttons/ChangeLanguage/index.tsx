@@ -57,6 +57,7 @@ function ChangeLanguage() {
   }, [isOpen, isHover, width])
 
   async function handleChangeLang(lang: Language) {
+    console.log(lang)
     switch (lang.code) {
       case "pt_BR":
         setActualLang(lang);

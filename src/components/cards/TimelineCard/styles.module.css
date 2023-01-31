@@ -30,6 +30,7 @@
   margin-top: 16px;
   margin-bottom: 4px;
   width: 160px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -43,6 +44,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .timeline_card_name {
@@ -139,5 +141,22 @@
     width: 88px;
   }
 }
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+  .timeline_card_when {
+    width: 80px;
+  }
+
+  .timeline_card_where {
+    width: 80px;
+  }
+}
 @media screen and (max-width: 400px) {}
+@media screen and (max-width: 360px) {
+  .timeline_card_when {
+    width: 72px;
+  }
+
+  .timeline_card_where {
+    width: 72px;
+  }
+}

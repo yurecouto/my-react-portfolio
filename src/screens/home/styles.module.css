@@ -20,3 +20,24 @@
     height: 120px;
   }
 }
+
+@media screen and (max-width: 864px) {}
+@media screen and (max-width: 768px) {
+  .cover_letter_sub_container {
+    height: 110px;
+  }
+}
+@media screen and (max-width: 704px) {}
+@media screen and (max-width: 640px) {
+  .cover_letter_sub_container {
+    height: 100px;
+  }
+}
+@media screen and (max-width: 560px) {}
+@media screen and (max-width: 480px) {
+  .cover_letter_sub_container {
+    height: 80px;
+  }
+}
+@media screen and (max-width: 400px) {}
+@media screen and (max-width: 360px) {}

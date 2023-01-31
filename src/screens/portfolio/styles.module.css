@@ -50,9 +50,25 @@
   .portfolio_menu_items {
     width: 65%;
   }
+
+  .portfolio_menu {
+    margin-top: 32px;
+  }
+
+  .portfolio_container_title {
+    margin-bottom: 32px;
+  }
 }
 @media screen and (max-width: 704px) {}
 @media screen and (max-width: 640px) {}
 @media screen and (max-width: 560px) {}
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+  .portfolio_menu {
+    margin-top: 16px;
+  }
+
+  .portfolio_container_title {
+    margin-bottom: 16px;
+  }
+}
 @media screen and (max-width: 400px) {}

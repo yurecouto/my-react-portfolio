@@ -76,7 +76,7 @@ function LanguageOption({
           borderBottom: last ? "none" : "1px solid",
           borderBottomColor: last ? "none" : theme.COLORS.PAGE_SEPARATOR,
         }}
-        onClick={onClick}
+        onClick={() => onClick(language)}
       >
         <Icon className={styles.change_lang_option_icon} icon={language.icon}/>
       </div>

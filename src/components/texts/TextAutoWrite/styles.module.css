@@ -8,7 +8,6 @@
   overflow: hidden;
   animation: typing 2.5s steps(31, end),
   cursor-blink 0.3s step-end infinite alternate;
-  position: relative;
 }
 
 @keyframes typing {
@@ -63,5 +62,18 @@
     font-size: 18px;
   }
 }
-@media screen and (max-width: 480px) {}
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 480px) {
+  .typing_text {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .typing_text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .typing_text {
+    font-size: 14px;
+  }
+}

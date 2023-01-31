@@ -85,28 +85,28 @@ function Portfolio () {
         <div className={styles.portfolio_container_title}>
           <TitlePage text={`${t("Portfolio")}:`}/>
           <div className={styles.portfolio_menu}>
-                <div className={styles.portfolio_menu_items}>
-                  <FilterButton
-                    text="All"
-                    onClick={() => handleFilter("all")}
-                  />
+            <div className={styles.portfolio_menu_items}>
+              <FilterButton
+                text="All"
+                onClick={() => handleFilter("all")}
+              />
 
-                  <FilterButton
-                    text="Back-end"
-                    onClick={() => handleFilter("backend")}
-                  />
+              <FilterButton
+                text="Back-end"
+                onClick={() => handleFilter("backend")}
+              />
 
-                  <FilterButton
-                    text="Front-End"
-                    onClick={() => handleFilter("frontend")}
-                  />
+              <FilterButton
+                text="Front-End"
+                onClick={() => handleFilter("frontend")}
+              />
 
-                  <FilterButton
-                    text="Mobile"
-                    onClick={() => handleFilter("mobile")}
-                  />
-                </div>
-              </div>
+              <FilterButton
+                text="Mobile"
+                onClick={() => handleFilter("mobile")}
+              />
+            </div>
+          </div>
         </div>
 
         <div className={styles.portfolio_sub_container}>

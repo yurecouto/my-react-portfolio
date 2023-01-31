@@ -64,3 +64,33 @@
 .portfolio_card:hover {
   transform: scale(1.02);
 }
+
+@media screen and (max-width: 640px) {
+  .portfolio_card_image {
+    max-width: 380px;
+  }
+
+  .portfolio_card {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 560px) {}
+@media screen and (max-width: 480px) {
+  .portfolio_card_image {
+    max-width: 340px;
+  }
+
+  .portfolio_card {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 400px) {}
+@media screen and (max-width: 360px) {
+  .portfolio_card_image {
+    max-width: 300px;
+  }
+
+  .portfolio_card {
+    width: 300px;
+  }
+}

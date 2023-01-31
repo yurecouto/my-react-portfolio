@@ -78,9 +78,13 @@ function Header() {
     ) : (
       <header
         className={styles.header}
-        style={{ backgroundColor: theme.COLORS.HEADER_BACKGROUND }}
+        style={{
+          backgroundColor: theme.COLORS.HEADER_BACKGROUND,
+          width: `${width}px`,
+        }}
       >
-        <div>
+        <div className={styles.header_title}>
+
           <TitleDefault text={"Yure Couto"}/>
         </div>
 
