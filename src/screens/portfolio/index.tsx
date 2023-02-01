@@ -15,6 +15,7 @@ import Project from "../../interfaces/Project";
 import styles from "./styles.module.css";
 
 import api from "../../services/api";
+import { shuffleProjects } from "../../utils/shuffleProjects";
 
 function Portfolio () {
   const { t } = useTranslation();
@@ -34,11 +35,11 @@ function Portfolio () {
     const fetch = async () => {
       const response = await api.get(`project/showall`);
       setFilteredProjects(response.data.reverse());
-      setProjects(response.data.reverse())
+      setProjects(shuffleProjects(response.data.reverse()));
     }
 
     fetch()
-  }, [])
+  }, []);
 
   const handleOpenDetails = async (project: Project) => {
     setSpotLightProject(project)

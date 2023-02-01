@@ -19,7 +19,7 @@ function Contact({
   info
   }: Props) {
   const { t } = useTranslation();
-  const { width } = useWindowSize();
+  const { width, height } = useWindowSize();
   const theme = useSelector(selectTheme);
 
   return (
@@ -29,7 +29,7 @@ function Contact({
         className={styles.contact_container}
         style={{
           width: width > 960 ? `${width - 260}px` : `${width}px`,
-          height: "auto",
+          height: width > 960 ? `${height}px` : `auto`,
         }}
       >
         <div className={styles.contact_title}>
