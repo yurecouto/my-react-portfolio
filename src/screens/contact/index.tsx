@@ -29,7 +29,7 @@ function Contact({
         className={styles.contact_container}
         style={{
           width: width > 960 ? `${width - 260}px` : `${width}px`,
-          height: width > 960 ? `${height}px` : `auto`,
+          height: `${height}px`,
         }}
       >
         <div className={styles.contact_title}>
