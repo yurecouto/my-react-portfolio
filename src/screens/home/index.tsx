@@ -16,8 +16,8 @@ function Home () {
   const theme = useSelector(selectTheme);
   const localTheme = localStorage.getItem("THEME");
 
-  const homeDark = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/homeDark.png"
-  const homeLight = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/homeLight.jpg"
+  const homeDark = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/homeDark.png";
+  const homeLight = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/homeLight.jpg";
 
   return (
     <>

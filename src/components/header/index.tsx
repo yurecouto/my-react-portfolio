@@ -17,8 +17,10 @@ function Header() {
   const { t } = useTranslation();
   const { width } = useWindowSize();
   const theme = useSelector(selectTheme);
+  const localTheme = localStorage.getItem("THEME");
 
-  const avatar = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/avatar.png"
+  const avatarDark = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/avatar.png";
+  const avatarLight = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/images/app/avatar.png";
 
   const [hoverIcon, setHoverIcon] = useState<boolean>();
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -53,7 +55,7 @@ function Header() {
           <img
             className={styles.header_profile_pic}
             style={{ borderColor: theme.COLORS.TEXT_HIGHLIGHT }}
-            src={avatar}
+            src={ localTheme === "dark" ? avatarDark : avatarLight }
             alt=""
           />
           <TitleDefault text={"Yure Couto"}/>
