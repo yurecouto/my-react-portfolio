@@ -102,8 +102,8 @@ function DetailsCard({ project, onClick }: Props) {
               </a>
             )}
             <div className={styles.details_card_info_skills}>
-              {project.skills.map(skill => (
-                <SkillCard skill={skill}/>
+              {project.skills.map((skill: string, index: number ) => (
+                <SkillCard key={skill + index.toString()} skill={skill}/>
               ))}
             </div>
           </div>

@@ -1,12 +1,12 @@
 import { Icon } from "@iconify/react";
 import React, { Suspense, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import { LoadingContainer } from "./components/containers/LoadingContainer";
 import { MainContainer } from "./components/containers/MainContainer";
 import { Header } from "./components/header";
 import Info from "./interfaces/Info";
-import { selectTheme } from "./providers/slices/theme.slice";
+import { selectTheme, setTheme } from "./providers/slices/theme.slice";
 import AboutMe from "./screens/aboutMe";
 import Contact from "./screens/contact";
 import Curriculum from "./screens/curriculum";
@@ -17,8 +17,12 @@ import WhatIDo from "./screens/whatIDo";
 import api from "./services/api";
 import i18n from "./translations/i18n";
 
+import dark from "./themes/dark.theme";
+import light from "./themes/light.theme";
+
 function App() {
   const theme = useSelector(selectTheme);
+  const dispatch = useDispatch();
 
   const [info, setInfo] = useState<Info>()
   const [isLoading, setIsLoading] = useState<boolean>(true)
@@ -88,6 +92,16 @@ function App() {
           }))
           break
       }
+    }
+  })
+
+  useEffect(() => {
+    if (localStorage.getItem("THEME") === "dark") {
+      dispatch(setTheme(dark))
+      localStorage.setItem("THEME", "dark")
+    } else {
+      dispatch(setTheme(light))
+      localStorage.setItem("THEME", "light")
     }
   })
 

@@ -77,8 +77,9 @@ function Curriculum () {
                 <SubTitleDefault text={`${t("Experience")}`}/>
               </div>
               <div className={styles.curriculum_professional_cards}>
-                {experiences?.map((experience) => (
+                {experiences?.map((experience, index: number) => (
                   <TimelineCard
+                    key={index.toString()}
                     timeline={experience}
                   />
                 ))}
@@ -91,6 +92,7 @@ function Curriculum () {
               <div className={styles.curriculum_education_cards}>
                 {educations?.map((education) => (
                   <TimelineCard
+                    key={indexedDB.toString()}
                     timeline={education}
                   />
                 ))}
@@ -110,8 +112,8 @@ function Curriculum () {
                 <SubTitleSecondary text="Back-end"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
-                {skills?.map((skill) => skill.type === "backend" && (
-                  <SkillCard skill={skill.name}/>
+                {skills?.map((skill, index: number) => skill.type === "backend" && (
+                  <SkillCard key={index.toString()} skill={skill.name}/>
                 ))}
               </div>
             </div>
@@ -121,8 +123,8 @@ function Curriculum () {
                 <SubTitleSecondary text="Front-end"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
-                {skills?.map((skill) => skill.type === "frontend" && (
-                  <SkillCard skill={skill.name}/>
+                {skills?.map((skill, index: number) => skill.type === "frontend" && (
+                  <SkillCard key={index.toString()} skill={skill.name}/>
                 ))}
               </div>
             </div>
@@ -132,8 +134,8 @@ function Curriculum () {
                 <SubTitleSecondary text="Data Base"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
-                {skills?.map((skill) => skill.type === "database" && (
-                  <SkillCard skill={skill.name}/>
+                {skills?.map((skill, index: number) => skill.type === "database" && (
+                  <SkillCard key={index.toString()} skill={skill.name}/>
                 ))}
               </div>
             </div>
@@ -143,8 +145,8 @@ function Curriculum () {
                 <SubTitleSecondary text="Mobile"/>
               </div>
               <div className={styles.curriculum_skills_sub_container}>
-                {skills?.map((skill) => skill.type === "mobile" && (
-                  <SkillCard skill={skill.name}/>
+                {skills?.map((skill, index: number) => skill.type === "mobile" && (
+                  <SkillCard key={index.toString()} skill={skill.name}/>
                 ))}
               </div>
             </div>

@@ -41,7 +41,15 @@ function Portfolio () {
     fetch()
   }, []);
 
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleOpenDetails = async (project: Project) => {
+    handleScroll("section-portfolio")
     setSpotLightProject(project)
     setOpenDetails(true)
   };
