@@ -23,7 +23,7 @@ function AboutMe({
   const { t } = useTranslation();
   const theme = useSelector(selectTheme);
 
-  const cvPortuguese = "https://raw.githubusercontent.com/yurecouto/my-portfolio-files/master/static/pdf/Curr%C3%ADculo_Yure_Couto.pdf"
+  const cvPortuguese = "https://firebasestorage.googleapis.com/v0/b/portfolio-64efa.appspot.com/o/CV%20-%20Yure%20Barbosa%20Couto.pdf?alt=media&token=adbbe157-6104-45b7-b708-f3f50f925684"
 
   return (
     <>
